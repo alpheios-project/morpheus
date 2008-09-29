@@ -8,7 +8,16 @@ STEMPROG= stemsrc/stripref stemsrc/zapfirstf stemsrc/headnolen \
 # Get all noms files, but without emacs backups
 nomsrc= $(filter-out %~,$(wildcard stemsrc/nom.* stemsrc/nom[0-9]*))
 
-all: $(STEMPROG) ends noms vbs deriv
+all: setup $(STEMPROG) ends noms vbs deriv
+
+setup:
+	[ -d derivs/ascii ] || mkdir derivs/ascii
+	[ -d derivs/indices ] || mkdir derivs/indices
+	[ -d derivs/out ] || mkdir derivs/out
+	[ -d endtables/ascii ] || mkdir endtables/ascii
+	[ -d endtables/indices ] || mkdir endtables/indices
+	[ -d endtables/out ] || mkdir endtables/out
+	[ -d steminds ] || mkdir steminds
 
 ends: nends vends
 
@@ -52,7 +61,7 @@ stemsrc/lemlist:
 
 stemind/nomind:	stemsrc/lsj.nom
 	cat $(nomsrc) stemsrc/lsj.nom \
-	    stemsrc/lsj.byhand > /cygdrive/c/tmp/nommorph
+	    stemsrc/lsj.byhand > /tmp/nommorph
 	indexnoms
 
 ia.noms:
