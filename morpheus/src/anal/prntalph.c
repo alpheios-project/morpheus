@@ -35,9 +35,18 @@ void	alpheiosDumpWord(gk_word* gkword, FILE* fout)
 	char curlem[MAXWORDSIZE];
 	*curlem = '\0';
 
+	const char* langAttr = "";
+	if (cur_lang() == GREEK)
+		langAttr = " xml:lang=\"grc\"";
+	else if (cur_lang() == LATIN)
+		langAttr = " xml:lang=\"lat\"";
+
 	/* start word */
 	if (nanals > 0)
+	{
 		fprintf(fout, "<word>\n");
+		fprintf(fout, "<form%s>%s</form>\n", langAttr, rawword_of(gkword));
+	}
 
 	/* for each analysis */
 	gk_analysis* nxtAnalysis = analysis_of(gkword);
@@ -62,7 +71,7 @@ void	alpheiosDumpWord(gk_word* gkword, FILE* fout)
 
 				/* put out info on lemma */
 				fprintf(fout, "<dict>\n");
-				fprintf(fout, "<hdwd>%s</hdwd>\n", curlem);
+				fprintf(fout, "<hdwd%s>%s</hdwd>\n", langAttr, curlem);
 
 				/* put out part of speech for first instance */
 				/* as part of speech for lemma */
@@ -96,6 +105,63 @@ FILE*			fout)
 		so we need to iterate and produce an inflection element for
 		each combination of gender and case.
 	*/
+
+	/* calculate language attribute for tags */
+	const char* langAttr = "";
+	if (cur_lang() == GREEK)
+		langAttr = " xml:lang=\"grc\"";
+	else if (cur_lang() == LATIN)
+		langAttr = " xml:lang=\"lat\"";
+
+	/* calculate term (stem + suffix) to display */
+	char	stem[BUFSIZ];
+	char	suffix[BUFSIZ];
+	int		stemlen = 0;
+	int		suffixlen = 0;
+	*stem = '\0';
+	*suffix = '\0';
+
+	/* build stem from preverb, aug1, stem, with colons between pieces */
+	const char*	part = preverb_of(analysis);
+	if (part && *part)
+	{
+		strncat(stem, part, BUFSIZ);
+		stemlen = strlen(stem);
+	}
+	/* aug1's containing > seem to indicate form changes already present */
+	/* in other parts; those without represent a new piece */
+	part = aug1_of(analysis);
+	if (part && *part && !strchr(part, '>'))
+	{
+		if (stemlen > 0)
+			strcat(stem, ":");
+		strncat(stem, part, BUFSIZ - stemlen);
+		stemlen = strlen(stem);
+	}
+	part = stem_of(analysis);
+	if (part && *part)
+	{
+		if (stemlen > 0)
+			strcat(stem, ":");
+		strncat(stem, part, BUFSIZ - stemlen);
+		stemlen = strlen(stem);
+	}
+
+	/* build suffix from suffix and endstring */
+	part = suffix_of(analysis);
+	if (part && *part)
+	{
+		strncat(suffix, part, BUFSIZ);
+		suffixlen = strlen(suffix);
+	}
+	part = endstring_of(analysis);
+	if (part && *part)
+	{
+		if (suffixlen > 0)
+			strcat(suffix, ":");
+		strncat(suffix, part, BUFSIZ - suffixlen);
+		suffixlen = strlen(suffix);
+	}
 
 	/* get case(s), copying to local storage because strtok_r overwrites */
 	word_form	wf = forminfo_of(analysis);
@@ -132,46 +198,10 @@ FILE*			fout)
 			fprintf(fout, "<infl>\n");
 
 			/* put out term */
-			fprintf(fout, "<term");
-			if (cur_lang() == GREEK)
-				fprintf(fout, " xml:lang=\"grc\"");
-			else if (cur_lang() == LATIN)
-				fprintf(fout, " xml:lang=\"la\"");
-			fprintf(fout, ">");
-
-			char	term[BUFSIZ];
-			strncpy(term, workword_of(analysis), BUFSIZ);
-
-			/* find start of stem and suffix in term */
-			/* last underscore in term separates them */
-			char*	stem = term;
-			char*	suffix = strrchr(term, '_');
-			if (suffix)
-			{
-				/* if no char or non-alpha after last underscore */
-				/* there's no suffix */
-				if (!*++suffix || !isalpha(*suffix))
-					suffix = NULL;
-
-				/* if there is a suffix, null-terminate the stem */
-				if (suffix)
-					suffix[-1] = '\0';
-			}
-
-			/* sometimes term has multiple underscores - remove them */
-			const char*	in = stem;
-			char*		out = stem;
-			for (; *in; ++in)
-			{
-				if (*in != '_')
-					*out++ = *in;
-			}
-			*out = '\0';
-
-			/* put out parts and terminate term element */
-			if (*stem)
+			fprintf(fout, "<term%s>", langAttr);
+			if (stemlen > 0)
 				fprintf(fout, "<stem>%s</stem>", stem);
-			if (suffix)
+			if (suffixlen > 0)
 				fprintf(fout, "<suff>%s</suff>", suffix);
 			fprintf(fout, "</term>\n");
 
