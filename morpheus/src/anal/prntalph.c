@@ -163,37 +163,45 @@ FILE*			fout)
 		suffixlen = strlen(suffix);
 	}
 
-	/* get case(s), copying to local storage because strtok_r overwrites */
+	/* get case(s), initialize ptrs to first case */
 	word_form	wf = forminfo_of(analysis);
-	char		caseNames[BUFSIZ];
-	const char*	nextCase = alpheiosMorphLookup(alpheiosCaseNames, case_of(wf));
-	if (nextCase)
-		strncpy(caseNames, nextCase, BUFSIZ);
+	const char*	caseNames = alpheiosMorphLookup(alpheiosCaseNames, case_of(wf));
+	const char*	nextCase;
+	const char*	endCase;
+	if (caseNames)
+	{
+		nextCase = caseNames;
+		endCase = strchr(nextCase, '/');
+		if (!endCase)
+			endCase = nextCase + strlen(nextCase);
+	}
 	else
-		*caseNames = '\0';
+	{
+		nextCase = endCase = "";
+	}
 
 	/* for each case (using empty string if none exist) */
-	char*	saveCase;
-	nextCase = strtok_r(caseNames, "/", &saveCase);
-	if (nextCase == NULL)
-		nextCase = "";
-	for (; nextCase; nextCase = strtok_r(NULL, "/", &saveCase))
+	while (nextCase)
 	{
-		/* get gender(s), copying to local storage */
-		char		genderNames[BUFSIZ];
-		const char*	nextGender = alpheiosMorphLookup(alpheiosGenderNames,
-													 gender_of(wf));
-		if (nextGender)
-			strncpy(genderNames, nextGender, BUFSIZ);
+		/* get gender(s), initialize ptrs to first gender */
+		const char*	genderNames = alpheiosMorphLookup(alpheiosGenderNames,
+													  gender_of(wf));
+		const char*	nextGender;
+		const char*	endGender;
+		if (genderNames)
+		{
+			nextGender = genderNames;
+			endGender = strchr(nextGender, '/');
+			if (!endGender)
+				endGender = nextGender + strlen(nextGender);
+		}
 		else
-			*genderNames = '\0';
+		{
+			nextGender = endGender = "";
+		}
 
 		/* for each gender (using empty string if none exist) */
-		char*	saveGender;
-		nextGender = strtok_r(genderNames, "/", &saveGender);
-		if (nextGender == NULL)
-			nextGender = "";
-		for (; nextGender; nextGender = strtok_r(NULL, "/", &saveGender))
+		while (nextGender)
 		{
 			fprintf(fout, "<infl>\n");
 
@@ -209,10 +217,24 @@ FILE*			fout)
 			alpheiosDumpPartOfSpeech(analysis, fout);
 
 			/* dump case and gender (if any) and other morphological info */
-			if (*nextCase)
-				fprintf(fout, "<case>%s</case>\n", nextCase);
-			if (*nextGender)
-				fprintf(fout, "<gend>%s</gend>\n", nextGender);
+			int caseLen = endCase - nextCase;
+			int	genderLen = endGender - nextGender;
+			if (caseLen)
+			{
+				fprintf(fout,
+						"<case>%*.*s</case>\n",
+						caseLen,
+						caseLen,
+						nextCase);
+			}
+			if (genderLen)
+			{
+				fprintf(fout,
+						"<gend>%*.*s</gend>\n",
+						genderLen,
+						genderLen,
+						nextGender);
+			}
 			alpheiosDumpMorphology(wf, fout);
 
 			/* other info: geographic region, dialect */
@@ -227,13 +249,33 @@ FILE*			fout)
 							 dialect_of(analysis),
 							 fout);
 
-/*
-			fprintf(fout,
-					"<note>Stem: %o</note>\n",
-					analysis->gs_steminfo);
-*/
-
 			fprintf(fout, "</infl>\n");
+
+			/* advance to next gender */
+			if (*endGender == '/')
+			{
+				nextGender = endGender + 1;
+				endGender = strchr(nextGender, '/');
+				if (!endGender)
+					endGender = nextGender + strlen(nextGender);
+			}
+			else
+			{
+				nextGender = NULL;
+			}
+		}
+
+		/* advance to next case */
+		if (*endCase == '/')
+		{
+			nextCase = endCase + 1;
+			endCase = strchr(nextCase, '/');
+			if (!endCase)
+				endCase = nextCase + strlen(nextCase);
+		}
+		else
+		{
+			nextCase = NULL;
 		}
 	}
 }

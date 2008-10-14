@@ -63,49 +63,58 @@ int main(int argc, char** argv)
 		}
 	}
 
-	/* if args left */
-	if (optind < argc)
+	/* process input */
+	int	nwords = 0;
+	while (1)
 	{
-		/* use remaining args as line */
-		*line = '\0';
-		while (optind < argc)
-		{
-			if (*line != '\0')
-				strcat(line, " ");
-			strcat(line, argv[optind++]);
-		}
-	}
-	else
-	{
-		/* get line from stdin, minus trailing newline */
-		if (!fgets(line, BUFSIZ * 4, stdin) || (strlen(line) == 0))
-		{
-			printf("<error>No line</error>\n");
-			return 1;
-		}
-		if (line[strlen(line) - 1] == '\n')
-			line[strlen(line) - 1] = '\0';
-	}
+		/* if processed command line args */
+		if (argc == 0)
+			break;
 
-	/* for each word in line */
-	int		firstWord = 1;
-	char*	word = strtok(line, " \t");
-	for (; word; word = strtok(NULL, " \t"))
-	{
-		trimdigit(word);
-		if (!*word)
-			continue;
-		if (firstWord)
+		/* if args left */
+		if (optind < argc)
 		{
-			printf("<words>\n");
-			firstWord = 0;
+			/* use remaining args as line */
+			*line = '\0';
+			while (optind < argc)
+			{
+				if (*line != '\0')
+					strcat(line, " ");
+				strcat(line, argv[optind++]);
+			}
+
+			/* exit loop next time through */
+			argc = 0;
+		}
+		else
+		{
+			/* get line from stdin, minus trailing newline */
+			if (!fgets(line, BUFSIZ * 4, stdin))
+			{
+				/* exit loop if no more input */
+				break;
+			}
+			if (line[strlen(line) - 1] == '\n')
+				line[strlen(line) - 1] = '\0';
 		}
 
-		if (!alpheiosCheckstring(word, flags, stdout))
-			printf("<unknown>%s</unknown>\n", word);
+		/* for each word in line */
+		char*	word = strtok(line, " \t");
+		for (; word; word = strtok(NULL, " \t"))
+		{
+			trimdigit(word);
+			if (!*word)
+				continue;
+			if (nwords == 0)
+				printf("<words>\n");
+
+			if (!alpheiosCheckstring(word, flags, stdout))
+				printf("<unknown>%s</unknown>\n", word);
+			++nwords;
+		}
 	}
 
-	if (firstWord)
+	if (nwords == 0)
 	{
 		printf("<error>No words</error>\n");
 		return 2;
