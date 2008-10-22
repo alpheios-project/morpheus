@@ -40,7 +40,7 @@ ${ANALLIB}: ${ANALOBJ}
 	ar rv ${ANALLIB} ${ANALOBJ}
 	ranlib ${ANALLIB}
 
-ALL=cruncher alpheios pname findbase deverbal ${ANALLIB}
+ALL=cruncher morpheus pname findbase deverbal ${ANALLIB}
 
 all: ${ALL}
 
@@ -54,8 +54,8 @@ lcnt: lcnt.o ${ANALLIB} ${LIBS}
 cruncher:stdiomorph.o ${ANALLIB} ${LIBS}
 	${CC} -o cruncher stdiomorph.o ../gener/genwd.o ${ANALLIB} ${LIBS}
 
-alpheios:alpheios.o prntalph.o ${ANALLIB} ${LIBS}
-	${CC} -g -o alpheios alpheios.o prntalph.o ../gener/genwd.o \
+morpheus:morpheus.o prntalph.o ${ANALLIB} ${LIBS}
+	${CC} -g -o morpheus morpheus.o prntalph.o ../gener/genwd.o \
 		${ANALLIB} ${LIBS}
 
 morphcheck:morphcheck.o ${LSJDIR}/MDBlib.o ${LSJDIR}/flen.o ${ANALOBJ} ${LIBS}
