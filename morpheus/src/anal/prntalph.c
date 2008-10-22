@@ -3,7 +3,7 @@
 
 void		alpheiosDumpWord(gk_word* gkword, FILE* fout);
 void		alpheiosDumpAnalysis(gk_analysis* analysis, FILE* fout);
-void		alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout);
+void		alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart);
 void		alpheiosDumpMorphology(word_form a_wf, FILE* a_fout);
 void		alpheiosDumpFlag(const char* a_tag,
 							 const char* a_label,
@@ -37,7 +37,7 @@ void	alpheiosDumpWord(gk_word* gkword, FILE* fout)
 
 	const char* langAttr = "";
 	if (cur_lang() == GREEK)
-		langAttr = " xml:lang=\"grc\"";
+		langAttr = " xml:lang=\"grc-x-beta\"";
 	else if (cur_lang() == LATIN)
 		langAttr = " xml:lang=\"lat\"";
 
@@ -76,7 +76,7 @@ void	alpheiosDumpWord(gk_word* gkword, FILE* fout)
 				/* put out part of speech for first instance */
 				/* as part of speech for lemma */
 				/* (should we be doing this at all?) */
-				/* alpheiosDumpPartOfSpeech(nxtAnalysis, fout); */
+				alpheiosDumpPartOfSpeech(nxtAnalysis, fout, 1);
 
 				fprintf(fout, "</dict>\n");
 			}
@@ -109,7 +109,7 @@ FILE*			fout)
 	/* calculate language attribute for tags */
 	const char* langAttr = "";
 	if (cur_lang() == GREEK)
-		langAttr = " xml:lang=\"grc\"";
+		langAttr = " xml:lang=\"grc-x-beta\"";
 	else if (cur_lang() == LATIN)
 		langAttr = " xml:lang=\"lat\"";
 
@@ -214,7 +214,7 @@ FILE*			fout)
 			fprintf(fout, "</term>\n");
 
 			/* put out part of speech */
-			alpheiosDumpPartOfSpeech(analysis, fout);
+			alpheiosDumpPartOfSpeech(analysis, fout, 0);
 
 			/* dump case and gender (if any) and other morphological info */
 			int caseLen = endCase - nextCase;
@@ -281,13 +281,14 @@ FILE*			fout)
 }
 
 /* dump part of speech */
-void	alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout)
+void	alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart)
 {
 	/* check various part of speech forms */
 	const char*	pofs = NULL;
 	if (Is_participle(analysis))
 	{
-		pofs = "verb participle";
+		/* if not looking for participles, say it's a verb */
+		pofs = (nopart ? "verb" : "verb participle");
 	}
 	else if (Is_nounform(analysis) || Is_adjform(analysis))
 	{
