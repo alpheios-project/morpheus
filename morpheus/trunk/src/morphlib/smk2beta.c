@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include <malloc.h>
+#include <stdlib.h>
 #include "smk2beta.h"
-/* char * malloc(); */
 
 #define MAXCHAR 		256
 #define MAXSUBSTRING 	6
