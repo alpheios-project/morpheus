@@ -19,6 +19,15 @@ setup:
 	[ -d endtables/out ] || mkdir endtables/out
 	[ -d steminds ] || mkdir steminds
 
+clean:
+	[ -d derivs/ascii ] && rm -fr derivs/ascii
+	[ -d derivs/indices ] &&  rm -fr derivs/indices
+	[ -d derivs/out ] && rm -fr derivs/out
+	[ -d endtables/ascii ] && rm -fr endtables/ascii
+	[ -d endtables/indices ] && rm -fr endtables/indices
+	[ -d endtables/out ] && rm -fr endtables/out
+	[ -d steminds ] && rm -fr steminds
+
 ends: nends vends
 
 nends:
