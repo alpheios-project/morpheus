@@ -3,7 +3,7 @@
 
 void		alpheiosDumpWord(gk_word* gkword, FILE* fout);
 void		alpheiosDumpAnalysis(gk_analysis* analysis, FILE* fout);
-void		alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart);
+const char*	alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart);
 void		alpheiosDumpMorphology(word_form a_wf, FILE* a_fout);
 void		alpheiosDumpFlag(const char* a_tag,
 							 const char* a_label,
@@ -76,7 +76,19 @@ void	alpheiosDumpWord(gk_word* gkword, FILE* fout)
 				/* put out part of speech for first instance */
 				/* as part of speech for lemma */
 				/* (should we be doing this at all?) */
-				alpheiosDumpPartOfSpeech(nxtAnalysis, fout, 1);
+				const char*	pofs = alpheiosDumpPartOfSpeech(nxtAnalysis,
+															fout,
+															1);
+
+				/* put out gender for noun */
+				if (strcmp(pofs, "noun") == 0)
+				{
+					fprintf(fout,
+							"<gend>%s</gend>\n",
+							alpheiosMorphLookup(
+								alpheiosGenderNames,
+								gender_of(forminfo_of(nxtAnalysis))));
+				}
 
 				fprintf(fout, "</dict>\n");
 			}
@@ -281,7 +293,10 @@ FILE*			fout)
 }
 
 /* dump part of speech */
-void	alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart)
+const char*		alpheiosDumpPartOfSpeech(
+gk_analysis*	analysis,
+FILE*			fout,
+int				nopart)
 {
 	/* check various part of speech forms */
 	const char*	pofs = NULL;
@@ -290,9 +305,13 @@ void	alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart)
 		/* if not looking for participles, say it's a verb */
 		pofs = (nopart ? "verb" : "verb participle");
 	}
-	else if (Is_nounform(analysis) || Is_adjform(analysis))
+	else if (Is_nounform(analysis))
 	{
 		pofs = "noun";
+	}
+ 	else if (Is_adjform(analysis))
+	{
+		pofs = "adjective";
 	}
   	else if (Is_verbform(analysis))
 	{
@@ -336,6 +355,8 @@ void	alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart)
 							 fout);
 		}
 	}
+
+	return pofs;
 }
 
 /* dump morphological values (except case and gender) */
