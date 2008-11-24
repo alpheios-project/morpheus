@@ -1,0 +1,7 @@
+The source code for Morpheus is licensed by the Perseus Digital Library under 
+the Mozilla Public License,version 1.1.
+
+The Alpheios project made modifications to the Morpheus code to provide 
+XML formatted output.
+
+A copy of the Mozilla Public License is included with this distribution.
