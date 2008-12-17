@@ -18,6 +18,7 @@ typedef unsigned int Stemtype;
 #define VERBSTEM	(0100)
 */
 
+#define DECL_MASK		(03700)
 #define DECL1			(0100)
 #define DECL2			(0200)
 #define DECL3			(0400)
