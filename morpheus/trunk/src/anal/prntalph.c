@@ -1,10 +1,17 @@
 #include <gkstring.h>
 #include "prntalph.h"
 
-void		alpheiosDumpWord(gk_word* gkword, FILE* fout);
+int			alpheiosPrintWord(gk_word* gkword, PrntFlags prntflags, FILE* fout);
+void		alpheiosDumpWord(gk_word* gkword, PrntFlags prntflags, FILE* fout);
 void		alpheiosDumpAnalysis(gk_analysis* analysis, FILE* fout);
-const char*	alpheiosDumpPartOfSpeech(gk_analysis* analysis, FILE* fout, int nopart);
+const char*	alpheiosDumpPartOfSpeech(gk_analysis* analysis,
+									 FILE* fout,
+									 int nopart);
 void		alpheiosDumpMorphology(word_form a_wf, FILE* a_fout);
+void		alpheiosDumpString(const char* a_label,
+							   const char* a_indent,
+							   gk_string* a_string,
+							   FILE* a_fout);
 void		alpheiosDumpFlag(const char* a_tag,
 							 const char* a_label,
 							 const MorphEntry* a_table,
@@ -20,7 +27,7 @@ int	alpheiosPrintWord(gk_word* gkword, PrntFlags prntflags, FILE* fout)
 
 	if (prntflags & PERSEUS_FORMAT)
 	{
-		alpheiosDumpWord(gkword, fout);
+		alpheiosDumpWord(gkword, prntflags, fout);
 		return nanals;
 	}
 
@@ -28,7 +35,7 @@ int	alpheiosPrintWord(gk_word* gkword, PrntFlags prntflags, FILE* fout)
 }
 
 /* dump out info on a single word */
-void	alpheiosDumpWord(gk_word* gkword, FILE* fout)
+void	alpheiosDumpWord(gk_word* gkword, PrntFlags prntflags, FILE* fout)
 {
 	int nanals = totanal_of(gkword);
 	int goodanals = GoodAnals(gkword,0);
@@ -53,6 +60,25 @@ void	alpheiosDumpWord(gk_word* gkword, FILE* fout)
 	gk_analysis* endAnalysis = nxtAnalysis + nanals;
 	for (; nxtAnalysis != endAnalysis; ++nxtAnalysis)
 	{
+		if (prntflags & SHOW_FULL_INFO)
+		{
+			fprintf(fout, "<dump_analysis>\n");
+			alpheiosDumpString("self", "", (gk_string*) nxtAnalysis, fout);
+			fprintf(fout, "  <dict>%s</dict>\n", nxtAnalysis->st_dictform);
+			fprintf(fout, "  <eng>%s</eng>\n", nxtAnalysis->st_engform);
+			alpheiosDumpString("preverb", "  ", &nxtAnalysis->gs_preverb, fout);
+			alpheiosDumpString("aug1", "  ", &nxtAnalysis->gs_aug1, fout);
+			alpheiosDumpString("stem", "  ", &nxtAnalysis->gs_stem, fout);
+			alpheiosDumpString("suffix", "  ", &nxtAnalysis->gs_suffix, fout);
+			alpheiosDumpString("end", "  ", &nxtAnalysis->gs_endstring, fout);
+			fprintf(fout, "  <rawprvb>%s</rawprvb>\n", nxtAnalysis->st_rawprvb);
+			fprintf(fout, "  <rawword>%s</rawword>\n", nxtAnalysis->st_rawword);
+			fprintf(fout, "  <wkword>%s</wkword>\n", nxtAnalysis->st_workword);
+			fprintf(fout, "  <crasis>%s</crasis>\n", nxtAnalysis->st_crasis);
+			fprintf(fout, "  <z>%s</z>\n", nxtAnalysis->z);
+			fprintf(fout, "</dump_analysis>\n");
+		}
+
 		/* if there are no good analyses or this is a good one */
 		/* (lemma does not contain hyphen) */
 		if (!goodanals || !strchr(lemma_of(nxtAnalysis), '-'))
@@ -345,13 +371,14 @@ int				nopart)
 	{
 		fprintf(fout, "<pofs>%s</pofs>\n", pofs);
 
-		/* if noun, look for declension */
-		if (strcmp(pofs, "noun") == 0)
+		/* if noun or adjective, look for declension */
+		if ((strcmp(pofs, "noun") == 0) ||
+			(strcmp(pofs, "adjective") == 0))
 		{
 			alpheiosDumpFlag("decl",
 							 NULL,
 							 alpheiosDeclNames,
-							 stemtype_of(analysis),
+							 stemtype_of(analysis) & DECL_MASK,
 							 fout);
 		}
 	}
@@ -376,6 +403,34 @@ void	alpheiosDumpMorphology(word_form a_wf, FILE* a_fout)
 					 a_fout);
 	alpheiosDumpFlag("tense", NULL, alpheiosTenseNames, tense_of(a_wf), a_fout);
 	alpheiosDumpFlag("voice", NULL, alpheiosVoiceNames, voice_of(a_wf), a_fout);
+}
+
+void		alpheiosDumpString(
+const char*	a_label,
+const char* a_indent,
+gk_string*	a_string,
+FILE*		a_fout)
+{
+	fprintf(a_fout, "%s<%s>\n", a_indent, a_label);
+	fprintf(a_fout, "%s  <form>0%o</form>\n", a_indent, a_string->gs_forminfo);
+	fprintf(a_fout, "%s  <stem>0%o</stem>\n", a_indent, a_string->gs_steminfo);
+	fprintf(a_fout, "%s  <deriv>0%o</deriv>\n",
+			a_indent,
+			a_string->gs_derivtype);
+	fprintf(a_fout, "%s  <dial>0%o</dial>\n", a_indent, a_string->gs_dialect);
+	fprintf(a_fout, "%s  <geo>0%o</geo>\n", a_indent, a_string->gs_geogregion);
+	fprintf(a_fout, "%s  <morph>", a_indent);
+	int i;
+	for (i = 0; i < MORPHFLAG_BYTES; ++i)
+	{
+		if (i > 0)
+			fprintf(a_fout, ",");
+		fprintf(a_fout, "%d", a_string->gs_morphflags[i]);
+	}
+	fprintf(a_fout, "</morph>\n");
+	fprintf(a_fout, "%s  <dom>%s</dom>\n", a_indent, a_string->st_domains);
+	fprintf(a_fout, "%s  <str>%s</str>\n", a_indent, a_string->gs_gkstring);
+	fprintf(a_fout, "%s</%s>\n", a_indent, a_label);
 }
 
 void				alpheiosDumpFlag(
