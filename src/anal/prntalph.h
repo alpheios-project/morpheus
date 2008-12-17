@@ -44,6 +44,8 @@ MorphEntry	alpheiosDeclNames[] =
 	{"3rd",	DECL3},
 	{"4th",	DECL4},
 	{"5th",	DECL5},
+	{"1st & 2nd", DECL1|DECL2},
+	{"1st & 3rd", DECL1|DECL3},
 	{NULL,	0}
 };
 
