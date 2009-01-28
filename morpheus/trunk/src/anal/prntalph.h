@@ -88,13 +88,13 @@ MorphEntry	alpheiosGenderNames[] =
 MorphEntry	alpheiosMoodNames[] = {
 	{"indicative",	INDICATIVE},
 	{"subjunctive",	SUBJUNCTIVE},
-	{"participle",	PARTICIPLE},
-	{"optative",	OPTATIVE},
 	{"imperative",	IMPERATIVE},
-	{"infinitive",	INFINITIVE},
-	{"gerundive",	GERUNDIVE},
 	{"supine",		SUPINE},
+	{"optative",	OPTATIVE},
+	{"infinitive",	INFINITIVE},
+	{"participle",	PARTICIPLE},
 	{"conditional",	CONDITIONAL},
+	{"gerundive",	GERUNDIVE},
 	{NULL,			0}
 };
 
