@@ -18,6 +18,7 @@ void		alpheiosDumpFlag(const char* a_tag,
 							 long a_flags,
 							 FILE* a_fout);
 const char*	alpheiosMorphLookup(const MorphEntry* a_table, long a_flags);
+bool		isEmptyForm(word_form);
 
 /* print out info on a word */
 int	alpheiosPrintWord(gk_word* gkword, PrntFlags prntflags, FILE* fout)
@@ -63,19 +64,44 @@ void	alpheiosDumpWord(gk_word* gkword, PrntFlags prntflags, FILE* fout)
 		if (prntflags & SHOW_FULL_INFO)
 		{
 			fprintf(fout, "<dump_analysis>\n");
-			alpheiosDumpString("self", "", (gk_string*) nxtAnalysis, fout);
-			fprintf(fout, "  <dict>%s</dict>\n", nxtAnalysis->st_dictform);
-			fprintf(fout, "  <eng>%s</eng>\n", nxtAnalysis->st_engform);
+			alpheiosDumpString("self", "  ", (gk_string*) nxtAnalysis, fout);
+			if (strlen(nxtAnalysis->st_dictform) > 0)
+			{
+				fprintf(fout, "  <dictform>%s</dictform>\n",
+						nxtAnalysis->st_dictform);
+			}
+			if (strlen(nxtAnalysis->st_engform) > 0)
+			{
+				fprintf(fout, "  <engform>%s</engform>\n",
+						nxtAnalysis->st_engform);
+			}
 			alpheiosDumpString("preverb", "  ", &nxtAnalysis->gs_preverb, fout);
 			alpheiosDumpString("aug1", "  ", &nxtAnalysis->gs_aug1, fout);
 			alpheiosDumpString("stem", "  ", &nxtAnalysis->gs_stem, fout);
 			alpheiosDumpString("suffix", "  ", &nxtAnalysis->gs_suffix, fout);
 			alpheiosDumpString("end", "  ", &nxtAnalysis->gs_endstring, fout);
-			fprintf(fout, "  <rawprvb>%s</rawprvb>\n", nxtAnalysis->st_rawprvb);
-			fprintf(fout, "  <rawword>%s</rawword>\n", nxtAnalysis->st_rawword);
-			fprintf(fout, "  <wkword>%s</wkword>\n", nxtAnalysis->st_workword);
-			fprintf(fout, "  <crasis>%s</crasis>\n", nxtAnalysis->st_crasis);
-			fprintf(fout, "  <z>%s</z>\n", nxtAnalysis->z);
+			if (strlen(nxtAnalysis->st_rawprvb) > 0)
+			{
+				fprintf(fout, "  <rawprvb>%s</rawprvb>\n",
+						nxtAnalysis->st_rawprvb);
+			}
+			if (strlen(nxtAnalysis->st_rawword) > 0)
+			{
+				fprintf(fout, "  <rawword>%s</rawword>\n",
+						nxtAnalysis->st_rawword);
+			}
+			if (strlen(nxtAnalysis->st_workword) > 0)
+			{
+				fprintf(fout, "  <wkword>%s</wkword>\n",
+						nxtAnalysis->st_workword);
+			}
+			if (strlen(nxtAnalysis->st_crasis) > 0)
+			{
+				fprintf(fout, "  <crasis>%s</crasis>\n",
+						nxtAnalysis->st_crasis);
+			}
+			if (strlen(nxtAnalysis->z) > 0)
+				fprintf(fout, "  <z>%s</z>\n", nxtAnalysis->z);
 			fprintf(fout, "</dump_analysis>\n");
 		}
 
@@ -351,11 +377,13 @@ int				nopart)
 		pofs = "adjective";
 	else if (strstr(stemType, "pron") ||
 			 !strcmp(stemType, "indef") ||
-			 !strcmp(stemType, "relative"))
+			 !strcmp(stemType, "relative") ||
+			 !strcmp(stemType, "demonstr"))
 		pofs = "pronoun";
 	else if (!strcmp(stemType, "adverb") ||
 			 !strcmp(stemType, "article") ||
-			 !strcmp(stemType, "particle"))
+			 !strcmp(stemType, "particle") ||
+			 !strcmp(stemType, "numeral"))
 		pofs = stemType;
 	else if (!strcmp(stemType, "conj"))
 		pofs = "conjunction";
@@ -411,25 +439,124 @@ const char* a_indent,
 gk_string*	a_string,
 FILE*		a_fout)
 {
-	fprintf(a_fout, "%s<%s>\n", a_indent, a_label);
-	fprintf(a_fout, "%s  <form>0%o</form>\n", a_indent, a_string->gs_forminfo);
-	fprintf(a_fout, "%s  <stem>0%o</stem>\n", a_indent, a_string->gs_steminfo);
-	fprintf(a_fout, "%s  <deriv>0%o</deriv>\n",
-			a_indent,
-			a_string->gs_derivtype);
-	fprintf(a_fout, "%s  <dial>0%o</dial>\n", a_indent, a_string->gs_dialect);
-	fprintf(a_fout, "%s  <geo>0%o</geo>\n", a_indent, a_string->gs_geogregion);
-	fprintf(a_fout, "%s  <morph>", a_indent);
+	/* if no content, don't do anything */
 	int i;
 	for (i = 0; i < MORPHFLAG_BYTES; ++i)
 	{
-		if (i > 0)
-			fprintf(a_fout, ",");
-		fprintf(a_fout, "%d", a_string->gs_morphflags[i]);
+		if (a_string->gs_morphflags[i])
+			break;
 	}
-	fprintf(a_fout, "</morph>\n");
-	fprintf(a_fout, "%s  <dom>%s</dom>\n", a_indent, a_string->st_domains);
-	fprintf(a_fout, "%s  <str>%s</str>\n", a_indent, a_string->gs_gkstring);
+	if ((i == MORPHFLAG_BYTES) &&
+		isEmptyForm(a_string->gs_forminfo) &&
+		!a_string->gs_steminfo &&
+		!a_string->gs_derivtype &&
+		!a_string->gs_dialect &&
+		!a_string->gs_geogregion &&
+		(strlen(a_string->st_domains) == 0) &&
+		(strlen(a_string->gs_gkstring) == 0))
+	{
+		return;
+	}
+
+	fprintf(a_fout, "%s<%s>\n", a_indent, a_label);
+	if (!isEmptyForm(a_string->gs_forminfo))
+	{
+		fprintf(a_fout, "%s  <form>0%o</form>\n",
+				a_indent,
+				a_string->gs_forminfo);
+		if (a_string->gs_forminfo.f_voice)
+		{
+			fprintf(a_fout, "%s    <form.voice>0%o</form.voice>\n",
+					a_indent,
+					a_string->gs_forminfo.f_voice);
+		}
+		if (a_string->gs_forminfo.f_mood)
+		{
+			fprintf(a_fout, "%s    <form.mood>0%o</form.mood>\n",
+					a_indent,
+					a_string->gs_forminfo.f_mood);
+		}
+		if (a_string->gs_forminfo.f_tense)
+		{
+			fprintf(a_fout, "%s    <form.tense>0%o</form.tense>\n",
+					a_indent,
+					a_string->gs_forminfo.f_tense);
+		}
+		if (a_string->gs_forminfo.f_person)
+		{
+			fprintf(a_fout, "%s    <form.person>0%o</form.person>\n",
+					a_indent,
+					a_string->gs_forminfo.f_person);
+		}
+		if (a_string->gs_forminfo.f_number)
+		{
+			fprintf(a_fout, "%s    <form.number>0%o</form.number>\n",
+					a_indent,
+					a_string->gs_forminfo.f_number);
+		}
+		if (a_string->gs_forminfo.f_case)
+		{
+			fprintf(a_fout, "%s    <form.case>0%o</form.case>\n",
+					a_indent,
+					a_string->gs_forminfo.f_case);
+		}
+		if (a_string->gs_forminfo.f_degree)
+		{
+			fprintf(a_fout, "%s    <form.degree>0%o</form.degree>\n",
+					a_indent,
+					a_string->gs_forminfo.f_degree);
+		}
+		if (a_string->gs_forminfo.f_gender)
+		{
+			fprintf(a_fout, "%s    <form.gender>0%o</form.gender>\n",
+					a_indent,
+					a_string->gs_forminfo.f_gender);
+		}
+	}
+	if (a_string->gs_steminfo)
+	{
+		fprintf(a_fout, "%s  <stem>0%o %s</stem>\n",
+				a_indent,
+				a_string->gs_steminfo,
+				NameOfStemtype(stemtype_of(a_string)));
+	}
+	if (a_string->gs_derivtype)
+	{
+		fprintf(a_fout, "%s  <deriv>0%o</deriv>\n",
+				a_indent,
+				a_string->gs_derivtype);
+	}
+	if (a_string->gs_dialect)
+	{
+		fprintf(a_fout, "%s  <dial>0%o</dial>\n",
+				a_indent,
+				a_string->gs_dialect);
+	}
+	if (a_string->gs_geogregion)
+	{
+		fprintf(a_fout, "%s  <geo>0%o</geo>\n",
+				a_indent,
+				a_string->gs_geogregion);
+	}
+	if (i < MORPHFLAG_BYTES)
+	{
+		fprintf(a_fout, "%s  <morph>", a_indent);
+		for (i = 0; i < MORPHFLAG_BYTES; ++i)
+		{
+			if (i > 0)
+				fprintf(a_fout, ",");
+			fprintf(a_fout, "%d", a_string->gs_morphflags[i]);
+		}
+		fprintf(a_fout, "</morph>\n");
+	}
+	if (strlen(a_string->st_domains) > 0)
+	{
+		fprintf(a_fout, "%s  <dom>%s</dom>\n", a_indent, a_string->st_domains);
+	}
+	if (strlen(a_string->gs_gkstring) > 0)
+	{
+		fprintf(a_fout, "%s  <str>%s</str>\n", a_indent, a_string->gs_gkstring);
+	}
 	fprintf(a_fout, "%s</%s>\n", a_indent, a_label);
 }
 
@@ -463,4 +590,16 @@ const char*	alpheiosMorphLookup(const MorphEntry* a_table, long a_flags)
 	}
 
 	return NULL;
+}
+
+bool	isEmptyForm(word_form a_wf)
+{
+	return !a_wf.f_voice &&
+		   !a_wf.f_mood &&
+		   !a_wf.f_tense &&
+		   !a_wf.f_person &&
+		   !a_wf.f_number &&
+		   !a_wf.f_case &&
+		   !a_wf.f_degree &&
+		   !a_wf.f_gender;
 }
