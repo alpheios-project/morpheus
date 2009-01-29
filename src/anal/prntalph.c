@@ -371,15 +371,15 @@ int				nopart)
 	}
 
 	/* check stemtype and adjust part of speech */
-	/* Note: check for "_adj" must precede test for "pron" */
 	const char*	stemType = NameOfStemtype(stemtype_of(analysis));
-	if (strstr(stemType, "_adj"))
-		pofs = "adjective";
-	else if (strstr(stemType, "pron") ||
+	if (strstr(stemType, "pron") ||
 			 !strcmp(stemType, "indef") ||
 			 !strcmp(stemType, "relative") ||
-			 !strcmp(stemType, "demonstr"))
+			 !strcmp(stemType, "demonstr") ||
+			 !strcmp(stemType, "art_adj"))
 		pofs = "pronoun";
+	else if (strstr(stemType, "_adj"))
+		pofs = "adjective";
 	else if (!strcmp(stemType, "adverb") ||
 			 !strcmp(stemType, "article") ||
 			 !strcmp(stemType, "particle") ||
