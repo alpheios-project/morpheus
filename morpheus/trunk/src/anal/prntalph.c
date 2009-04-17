@@ -307,8 +307,8 @@ FILE*			fout)
 							 alpheiosGeoNames,
 							 geogregion_of(analysis),
 							 fout);
-			alpheiosDumpFlag("note",
-							 "Dialect: ",
+			alpheiosDumpFlag("dial",
+							 NULL,
 							 alpheiosDialectNames,
 							 dialect_of(analysis),
 							 fout);
