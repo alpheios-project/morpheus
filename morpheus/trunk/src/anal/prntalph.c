@@ -13,11 +13,15 @@ void		alpheiosDumpString(const char* a_label,
 							   gk_string* a_string,
 							   FILE* a_fout);
 void		alpheiosDumpFlag(const char* a_tag,
-							 const char* a_label,
 							 const MorphEntry* a_table,
 							 long a_flags,
 							 FILE* a_fout);
+void		alpheiosDumpFlags(const char* a_tag,
+							  const MorphEntry* a_table,
+							  long a_flags,
+							  FILE* a_fout);
 const char*	alpheiosMorphLookup(const MorphEntry* a_table, long a_flags);
+const char*	alpheiosMorphLookups(const MorphEntry* a_table, long* a_flags);
 bool		isEmptyForm(word_form);
 
 /* print out info on a word */
@@ -302,13 +306,11 @@ FILE*			fout)
 			alpheiosDumpMorphology(wf, fout);
 
 			/* other info: geographic region, dialect */
-			alpheiosDumpFlag("geo",
-							 NULL,
+			alpheiosDumpFlags("geo",
 							 alpheiosGeoNames,
 							 geogregion_of(analysis),
 							 fout);
-			alpheiosDumpFlag("dial",
-							 NULL,
+			alpheiosDumpFlags("dial",
 							 alpheiosDialectNames,
 							 dialect_of(analysis),
 							 fout);
@@ -404,7 +406,6 @@ int				nopart)
 			(strcmp(pofs, "adjective") == 0))
 		{
 			alpheiosDumpFlag("decl",
-							 NULL,
 							 alpheiosDeclNames,
 							 stemtype_of(analysis) & DECL_MASK,
 							 fout);
@@ -417,20 +418,12 @@ int				nopart)
 /* dump morphological values (except case and gender) */
 void	alpheiosDumpMorphology(word_form a_wf, FILE* a_fout)
 {
-	alpheiosDumpFlag("comp",
-					 NULL,
-					 alpheiosComparisonNames,
-					 degree_of(a_wf),
-					 a_fout);
-	alpheiosDumpFlag("mood", NULL, alpheiosMoodNames, mood_of(a_wf), a_fout);
-	alpheiosDumpFlag("num", NULL, alpheiosNumberNames, number_of(a_wf), a_fout);
-	alpheiosDumpFlag("pers",
-					 NULL,
-					 alpheiosPersonNames,
-					 person_of(a_wf),
-					 a_fout);
-	alpheiosDumpFlag("tense", NULL, alpheiosTenseNames, tense_of(a_wf), a_fout);
-	alpheiosDumpFlag("voice", NULL, alpheiosVoiceNames, voice_of(a_wf), a_fout);
+	alpheiosDumpFlag("comp", alpheiosComparisonNames, degree_of(a_wf), a_fout);
+	alpheiosDumpFlag("mood", alpheiosMoodNames, mood_of(a_wf), a_fout);
+	alpheiosDumpFlag("num", alpheiosNumberNames, number_of(a_wf), a_fout);
+	alpheiosDumpFlag("pers", alpheiosPersonNames, person_of(a_wf), a_fout);
+	alpheiosDumpFlag("tense", alpheiosTenseNames, tense_of(a_wf), a_fout);
+	alpheiosDumpFlag("voice", alpheiosVoiceNames, voice_of(a_wf), a_fout);
 }
 
 void		alpheiosDumpString(
@@ -562,22 +555,42 @@ FILE*		a_fout)
 
 void				alpheiosDumpFlag(
 const char*			a_tag,
-const char*			a_label,
 const MorphEntry*	a_table,
 long				a_flags,
 FILE*				a_fout)
 {
 	const char*	name = alpheiosMorphLookup(a_table, a_flags);
 	if (name && strlen(name) > 0)
-		fprintf(a_fout,
-				"<%s>%s%s</%s>\n",
-				a_tag,
-				(a_label ? a_label : ""),
-				name,
-				a_tag);
+		fprintf(a_fout, "<%s>%s</%s>\n", a_tag, name, a_tag);
 }
 
-const char*	alpheiosMorphLookup(const MorphEntry* a_table, long a_flags)
+void				alpheiosDumpFlags(
+const char*			a_tag,
+const MorphEntry*	a_table,
+long				a_flags,
+FILE*				a_fout)
+{
+	char	temp[BUFSIZ];
+	*temp = '\0';
+
+	while (a_flags)
+	{
+		const char*	name = alpheiosMorphLookups(a_table, &a_flags);
+		if (name)
+		{
+			if (*temp)
+				strcat(temp, " ");
+			strcat(temp, name);
+		}
+	}
+
+	if (*temp)
+		fprintf(a_fout, "<%s>%s</%s>\n", a_tag, temp, a_tag);
+}
+
+const char*	alpheiosMorphLookup(
+const MorphEntry*	a_table,
+long				a_flags)
 {
 	if (!a_flags || !a_table)
 		return NULL;
@@ -587,6 +600,28 @@ const char*	alpheiosMorphLookup(const MorphEntry* a_table, long a_flags)
 	{
 		if ((nextEntry->d_flags & a_flags) == a_flags)
 			return nextEntry->d_name;
+	}
+
+	return NULL;
+}
+
+const char*	alpheiosMorphLookups(
+const MorphEntry*	a_table,
+long*				a_flags)
+{
+	if (!*a_flags || !a_table)
+		return NULL;
+
+	const MorphEntry*	nextEntry;
+	for (nextEntry = a_table; nextEntry->d_flags != 0; ++nextEntry)
+	{
+		/* if this entry is contained in flags */
+		if ((nextEntry->d_flags & *a_flags) == nextEntry->d_flags)
+		{
+			/* mask it out for future calls */
+			*a_flags &= ~(nextEntry->d_flags);
+			return nextEntry->d_name;
+		}
 	}
 
 	return NULL;
