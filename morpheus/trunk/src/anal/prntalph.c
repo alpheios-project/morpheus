@@ -69,12 +69,12 @@ void	alpheiosDumpWord(gk_word* gkword, PrntFlags prntflags, FILE* fout)
 		{
 			fprintf(fout, "<dump_analysis>\n");
 			alpheiosDumpString("self", "  ", (gk_string*) nxtAnalysis, fout);
-			if (strlen(nxtAnalysis->st_dictform) > 0)
+			if (*(nxtAnalysis->st_dictform))
 			{
 				fprintf(fout, "  <dictform>%s</dictform>\n",
 						nxtAnalysis->st_dictform);
 			}
-			if (strlen(nxtAnalysis->st_engform) > 0)
+			if (*(nxtAnalysis->st_engform))
 			{
 				fprintf(fout, "  <engform>%s</engform>\n",
 						nxtAnalysis->st_engform);
@@ -84,27 +84,27 @@ void	alpheiosDumpWord(gk_word* gkword, PrntFlags prntflags, FILE* fout)
 			alpheiosDumpString("stem", "  ", &nxtAnalysis->gs_stem, fout);
 			alpheiosDumpString("suffix", "  ", &nxtAnalysis->gs_suffix, fout);
 			alpheiosDumpString("end", "  ", &nxtAnalysis->gs_endstring, fout);
-			if (strlen(nxtAnalysis->st_rawprvb) > 0)
+			if (*(nxtAnalysis->st_rawprvb))
 			{
 				fprintf(fout, "  <rawprvb>%s</rawprvb>\n",
 						nxtAnalysis->st_rawprvb);
 			}
-			if (strlen(nxtAnalysis->st_rawword) > 0)
+			if (*(nxtAnalysis->st_rawword))
 			{
 				fprintf(fout, "  <rawword>%s</rawword>\n",
 						nxtAnalysis->st_rawword);
 			}
-			if (strlen(nxtAnalysis->st_workword) > 0)
+			if (*(nxtAnalysis->st_workword))
 			{
 				fprintf(fout, "  <wkword>%s</wkword>\n",
 						nxtAnalysis->st_workword);
 			}
-			if (strlen(nxtAnalysis->st_crasis) > 0)
+			if (*(nxtAnalysis->st_crasis))
 			{
 				fprintf(fout, "  <crasis>%s</crasis>\n",
 						nxtAnalysis->st_crasis);
 			}
-			if (strlen(nxtAnalysis->z) > 0)
+			if (*(nxtAnalysis->z))
 				fprintf(fout, "  <z>%s</z>\n", nxtAnalysis->z);
 			fprintf(fout, "</dump_analysis>\n");
 		}
@@ -305,7 +305,7 @@ FILE*			fout)
 			}
 			alpheiosDumpMorphology(wf, fout);
 
-			/* other info: geographic region, dialect */
+			/* other info: geographic region, dialect, types, etc. */
 			alpheiosDumpFlags("geo",
 							 alpheiosGeoNames,
 							 geogregion_of(analysis),
@@ -314,6 +314,17 @@ FILE*			fout)
 							 alpheiosDialectNames,
 							 dialect_of(analysis),
 							 fout);
+			const char* val = NameOfStemtype(stemtype_of(analysis));
+			if (val && *val)
+				fprintf(fout, "<stemtype>%s</stemtype>\n", val);
+			val = NameOfDerivtype(derivtype_of(analysis));
+			if (val && *val)
+				fprintf(fout, "<derivtype>%s</derivtype>\n", val);
+			char	temp[BUFSIZ];
+			*temp = '\0';
+			MorphNames(morphflags_of(analysis), temp, " ", 1);
+			if (*temp)
+				fprintf(fout, "<morph>%s</morph>\n", temp);
 
 			fprintf(fout, "</infl>\n");
 
@@ -445,8 +456,8 @@ FILE*		a_fout)
 		!a_string->gs_derivtype &&
 		!a_string->gs_dialect &&
 		!a_string->gs_geogregion &&
-		(strlen(a_string->st_domains) == 0) &&
-		(strlen(a_string->gs_gkstring) == 0))
+		!*(a_string->st_domains) &&
+		!*(a_string->gs_gkstring))
 	{
 		return;
 	}
@@ -542,11 +553,11 @@ FILE*		a_fout)
 		}
 		fprintf(a_fout, "</morph>\n");
 	}
-	if (strlen(a_string->st_domains) > 0)
+	if (*(a_string->st_domains))
 	{
 		fprintf(a_fout, "%s  <dom>%s</dom>\n", a_indent, a_string->st_domains);
 	}
-	if (strlen(a_string->gs_gkstring) > 0)
+	if (*(a_string->gs_gkstring))
 	{
 		fprintf(a_fout, "%s  <str>%s</str>\n", a_indent, a_string->gs_gkstring);
 	}
@@ -560,7 +571,7 @@ long				a_flags,
 FILE*				a_fout)
 {
 	const char*	name = alpheiosMorphLookup(a_table, a_flags);
-	if (name && strlen(name) > 0)
+	if (name && *name)
 		fprintf(a_fout, "<%s>%s</%s>\n", a_tag, name, a_tag);
 }
 
