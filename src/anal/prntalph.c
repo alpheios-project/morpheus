@@ -21,7 +21,6 @@ void		alpheiosDumpFlags(const char* a_tag,
 							  long a_flags,
 							  FILE* a_fout);
 const char*	alpheiosMorphLookup(const MorphEntry* a_table, long a_flags);
-const char*	alpheiosMorphLookups(const MorphEntry* a_table, long* a_flags);
 bool		isEmptyForm(word_form);
 
 /* print out info on a word */
@@ -581,17 +580,23 @@ const MorphEntry*	a_table,
 long				a_flags,
 FILE*				a_fout)
 {
+	if (!a_flags || !a_table)
+		return;
+
 	char	temp[BUFSIZ];
 	*temp = '\0';
 
-	while (a_flags)
+	const MorphEntry*	nextEntry;
+	for (nextEntry = a_table; nextEntry->d_flags != 0; ++nextEntry)
 	{
-		const char*	name = alpheiosMorphLookups(a_table, &a_flags);
-		if (name)
+		/* if this entry is contained in flags */
+		if ((nextEntry->d_flags & a_flags) == nextEntry->d_flags)
 		{
+			/* mask out used flags and add to output */
+			a_flags &= ~(nextEntry->d_flags);
 			if (*temp)
 				strcat(temp, " ");
-			strcat(temp, name);
+			strcat(temp, nextEntry->d_name);
 		}
 	}
 
@@ -611,28 +616,6 @@ long				a_flags)
 	{
 		if ((nextEntry->d_flags & a_flags) == a_flags)
 			return nextEntry->d_name;
-	}
-
-	return NULL;
-}
-
-const char*	alpheiosMorphLookups(
-const MorphEntry*	a_table,
-long*				a_flags)
-{
-	if (!*a_flags || !a_table)
-		return NULL;
-
-	const MorphEntry*	nextEntry;
-	for (nextEntry = a_table; nextEntry->d_flags != 0; ++nextEntry)
-	{
-		/* if this entry is contained in flags */
-		if ((nextEntry->d_flags & *a_flags) == nextEntry->d_flags)
-		{
-			/* mask it out for future calls */
-			*a_flags &= ~(nextEntry->d_flags);
-			return nextEntry->d_name;
-		}
 	}
 
 	return NULL;
