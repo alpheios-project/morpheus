@@ -21,6 +21,8 @@ void		alpheiosDumpFlags(const char* a_tag,
 							  long a_flags,
 							  FILE* a_fout);
 const char*	alpheiosMorphLookup(const MorphEntry* a_table, long a_flags);
+const char*	alpheiosAttributeLookup(const AttributeEntry* a_table,
+									const char* a_name);
 bool		isEmptyForm(word_form);
 
 /* print out info on a word */
@@ -183,6 +185,7 @@ FILE*			fout)
 	/* calculate term (stem + suffix) to display */
 	char	stem[BUFSIZ];
 	char	suffix[BUFSIZ];
+	char	temp[BUFSIZ];
 	int		stemlen = 0;
 	int		suffixlen = 0;
 	*stem = '\0';
@@ -288,11 +291,12 @@ FILE*			fout)
 			int	genderLen = endGender - nextGender;
 			if (caseLen)
 			{
+				strncpy(temp, nextCase, caseLen);
+				temp[caseLen] = '\0';
 				fprintf(fout,
-						"<case>%*.*s</case>\n",
-						caseLen,
-						caseLen,
-						nextCase);
+						"<case order=\"%s\">%s</case>\n",
+						alpheiosAttributeLookup(alpheiosCaseOrder, temp),
+						temp);
 			}
 			if (genderLen)
 			{
@@ -319,7 +323,6 @@ FILE*			fout)
 			val = NameOfDerivtype(derivtype_of(analysis));
 			if (val && *val)
 				fprintf(fout, "<derivtype>%s</derivtype>\n", val);
-			char	temp[BUFSIZ];
 			*temp = '\0';
 			MorphNames(morphflags_of(analysis), temp, " ", 1);
 			if (*temp)
@@ -409,7 +412,10 @@ int				nopart)
 	/* if part of speech found */
 	if (pofs)
 	{
-		fprintf(fout, "<pofs>%s</pofs>\n", pofs);
+		fprintf(fout,
+				"<pofs order=\"%s\">%s</pofs>\n",
+				alpheiosAttributeLookup(alpheiosPofsOrder, pofs),
+				pofs);
 
 		/* if noun or adjective, look for declension */
 		if ((strcmp(pofs, "noun") == 0) ||
@@ -619,6 +625,23 @@ long				a_flags)
 	}
 
 	return NULL;
+}
+
+const char*				alpheiosAttributeLookup(
+const AttributeEntry*	a_table,
+const char*				a_name)
+{
+	if (!a_name || !a_table)
+		return NULL;
+
+	const AttributeEntry*	nextEntry;
+	for (nextEntry = a_table; nextEntry->d_name != NULL; ++nextEntry)
+	{
+		if (strcmp(nextEntry->d_name, a_name) == 0)
+			break;
+	}
+
+	return nextEntry->d_value;
 }
 
 bool	isEmptyForm(word_form a_wf)

@@ -6,6 +6,12 @@ typedef struct
 	long		d_flags;
 } MorphEntry;
 
+typedef struct
+{
+	const char*	d_name;
+	const char*	d_value;
+} AttributeEntry;
+
 /*
 	Tables mapping flags for morphological categories to textual names
 	Note: Entries are tested by ANDing flags with table entries, and
@@ -16,7 +22,7 @@ typedef struct
 
 /*
 #define	SUBMASK	0777
-MorphEntry	alpheiosPosNames[] =
+MorphEntry	alpheiosPofsNames[] =
 {
 	{"adjective",	ADJSTEM|SUBMASK},
 	{"noun",		NOUNSTEM|SUBMASK},
@@ -36,6 +42,16 @@ MorphEntry	alpheiosPosNames[] =
 	{NULL,			0}
 };
 */
+
+AttributeEntry	alpheiosPofsOrder[] =
+{
+	{"noun",		"5"},
+	{"adjective",	"4"},
+	{"verb",		"3"},
+	{"adverb",		"2"},
+	{"preposition",	"1"},
+	{NULL,			" "}
+};
 
 MorphEntry	alpheiosDeclNames[] =
 {
@@ -63,6 +79,18 @@ MorphEntry	alpheiosCaseNames[] =
 	{"nominative/vocative",				NOMINATIVE|VOCATIVE},
 	{"nominative/vocative/accusative",	NOMINATIVE|VOCATIVE|ACCUSATIVE},
 	{NULL,								0}
+};
+
+AttributeEntry	alpheiosCaseOrder[] =
+{
+	{"nominative",	"7"},
+	{"genitive",	"6"},
+	{"dative",		"5"},
+	{"accusative",	"4"},
+	{"ablative",	"3"},
+	{"locative",	"2"},
+	{"vocative",	"1"},
+	{NULL,			" "}
 };
 
 MorphEntry	alpheiosComparisonNames[] =
