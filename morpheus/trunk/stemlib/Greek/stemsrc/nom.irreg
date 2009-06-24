@@ -278,6 +278,15 @@
 :wd:dru/as   irreg_decl3 fem acc pl
 
 :le:ei(=s
+:wd:ei(=s numeral nom sg masc
+:wd:mi/a numeral nom sg fem
+:wd:e(/n numeral nom acc sg neut
+:wd:e(no/s numeral gen sg masc neut
+:wd:mi/a=s numeral gen sg fem
+:wd:e(ni/ numeral dat sg masc neut
+:wd:mia=| numeral dat sg fem
+:wd:e(/na numeral acc sg masc
+:wd:mi/an numeral acc sg neut
 :wd:ei(=s irreg_decl3 sg masc nom sg
 :wd:h(=s irreg_decl3 sg masc nom sg doric *theocr.
 :wd:e(/n irreg_decl3 sg neut nom voc acc sg
@@ -1404,6 +1413,14 @@
 :wd:tri/a numeral nom voc acc pl neut
 :wd:triw=n numeral gen pl masc fem neut
 :wd:trisi/ numeral dat pl masc fem neut
+
+:le:te/ttares
+:wd:te/ttares numeral nom voc pl masc fem
+:wd:te/ttara numeral nom voc acc pl neut
+:wd:tetta/rwn numeral gen pl masc fem neut
+:wd:te/ttarsi numeral dat pl masc fem neut
+:wd:te/ttarsin numeral dat pl masc fem neut
+:wd:te/ttaras numeral acc pl masc fem
 
 :le:u(/dwr
 :wd:u(/dwr irreg_decl3 neut nom voc acc sg
