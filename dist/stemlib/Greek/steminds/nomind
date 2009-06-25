@@ -15616,14 +15616,14 @@
 2e(likhdon e(likhdo/n:e(likhdo/n:adverb
 2e(lkhdon e(lkhdo/n:e(lkhdo/n:adverb
 2e(lkustinda e(lkusti/nda:e(lkusti/nda:adverb
-2e(n e(/n:ei(=s:irreg_decl3:neut:nom/voc/acc:sg
-2e(na e(/na:ei(=s:irreg_decl3:masc:acc:sg
+2e(n e(/n:ei(=s:irreg_decl3:neut:nom/voc/acc:sg e(/n:ei(=s:numeral:neut:nom/acc:sg
+2e(na e(/na:ei(=s:irreg_decl3:masc:acc:sg e(/na:ei(=s:numeral:masc:acc:sg
 2e(ndeka e(/ndeka:e(/ndeka:numeral
 2e(nduo e(/nduo:e(/nduo:adverb
 2e(neka e(/neka:e(/neka:prep
 2e(neken e(/neken:e(/neka:prep
-2e(ni e(ni/:ei(=s:irreg_decl3:masc/neut:dat:sg
-2e(nos e(no/s:ei(=s:irreg_decl3:masc/neut:gen:sg
+2e(ni e(ni/:ei(=s:irreg_decl3:masc/neut:dat:sg e(ni/:ei(=s:numeral:masc/neut:dat:sg
+2e(nos e(no/s:ei(=s:irreg_decl3:masc/neut:gen:sg e(no/s:ei(=s:numeral:masc/neut:gen:sg
 2e(nwmenws e(nwme/nws:e(nwme/nws:adverb
 2e(o :e(/:pron3:masc/fem:gen:sg:enclitic
 2e(oi e(oi=:e(/:pron3:masc/fem:dat:sg:epic e(oi=:o(/s:relative:masc/neut:dat:sg:epic
@@ -16112,7 +16112,7 @@
 2ei(neken ei(/neken:e(/neka:prep:epic:ionic:poetic
 2ei(o ei(=o:e(/:pron3:masc/fem:gen:sg:poetic
 2ei(os ei(=os:ei(=os:conj:epic
-2ei(s ei(=s:ei(=s:irreg_decl3:masc:nom:sg
+2ei(s ei(=s:ei(=s:irreg_decl3:masc:nom:sg ei(=s:ei(=s:numeral:masc:nom:sg
 2ei(ws ei(/ws:e(/ws:conj:epic ei(=ws:e(/ws:conj:epic
 2ei) :ei):conj:proclitic ei)/:ei):conj:proclitic
 2ei)a ei)=a:ei)=a:exclam:poetic
@@ -17105,7 +17105,10 @@
 2mhtri mhtri/:mh/thr:irreg_decl3:fem:dat:sg
 2mhtroqen mhtro/qen:mhtro/qen:adverb
 2mhtros mhtro/s:mh/thr:irreg_decl3:fem:gen:sg
-2mia mi/a:ei(=s:os_h_on:fem:nom/voc:sg:epic
+2mia mi/a:ei(=s:numeral:fem:nom:sg mi/a:ei(=s:os_h_on:fem:nom/voc:sg:epic
+2mia| mia=|:ei(=s:numeral:fem:dat:sg
+2mian mi/an:ei(=s:numeral:neut:acc:sg
+2mias mi/a=s:ei(=s:numeral:fem:gen:sg
 2mic mi/c:mi/c:adverb
 2micoludisti micolu_disti/:micoludisti/:adverb
 2miga mi/ga:mi/ga:adverb
@@ -18794,7 +18797,13 @@
 2tetraxqa tetraxqa/:tetraxqa/:adverb
 2tetraxws tetraxw=s:tetraxw=s:adverb
 2tetta te/tta:te/tta:exclam
+2tettara te/ttara:te/ttares:numeral:neut:nom/voc/acc:pl
 2tettarakonta tettara/_konta:tessara/konta:numeral:attic
+2tettaras te/ttaras:te/ttares:numeral:masc/fem:acc:pl
+2tettares te/ttares:te/ttares:numeral:masc/fem:nom/voc:pl
+2tettarsi te/ttarsi:te/ttares:numeral:masc/fem/neut:dat:pl
+2tettarsin te/ttarsin:te/ttares:numeral:masc/fem/neut:dat:pl te/ttarsin:te/ttares:numeral:masc/fem/neut:dat:pl:nu_movable
+2tettarwn tetta/rwn:te/ttares:numeral:masc/fem/neut:gen:pl
 2tetufwmenws tetufwme/nws:tetufwme/nws:adverb
 2teu :su/:pron1:gen:2nd:sg:doric:enclitic :tis:indef:gen:sg:epic:ionic:enclitic teu=:su/:pron1:gen:2nd:sg:doric teu=:ti/s:indecl:gen:sg:ionic
 2teus teu=s:su/:pron1:gen:2nd:sg:doric
