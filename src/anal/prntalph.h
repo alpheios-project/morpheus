@@ -45,6 +45,7 @@ MorphEntry	alpheiosPofsNames[] =
 
 AttributeEntry	alpheiosPofsOrder[] =
 {
+	{"numeral",		"6"},
 	{"noun",		"5"},
 	{"adjective",	"4"},
 	{"verb",		"3"},
