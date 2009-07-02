@@ -15524,7 +15524,7 @@
 2druwn druw=n:dru=s:irreg_decl3:fem:gen:pl druw=n:dru=s:s_os:fem:gen:pl
 2duakis dua/kis:dua/kis:adverb
 2dueniausiws dueniausi/ws:dueniausi/ws:adverb
-2duo du/o:du/o:numeral
+2duo du/o:du/o:numeral:masc/fem/neut:nom/acc:dual
 2duodeka duo/deka:duokai/deka:numeral
 2duoin duoi=n:du/o:numeral:masc/fem/neut:gen/dat:dual
 2duoisi duoi=si:du/o:numeral:masc/fem/neut:dat:pl:ionic
@@ -17107,7 +17107,7 @@
 2mhtros mhtro/s:mh/thr:irreg_decl3:fem:gen:sg
 2mia mi/a:ei(=s:numeral:fem:nom:sg mi/a:ei(=s:os_h_on:fem:nom/voc:sg:epic
 2mia| mia=|:ei(=s:numeral:fem:dat:sg
-2mian mi/an:ei(=s:numeral:neut:acc:sg
+2mian mi/an:ei(=s:numeral:fem:acc:sg
 2mias mi/a=s:ei(=s:numeral:fem:gen:sg
 2mic mi/c:mi/c:adverb
 2micoludisti micolu_disti/:micoludisti/:adverb
