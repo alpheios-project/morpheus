@@ -15837,6 +15837,7 @@
 2e)mmapews e)mmape/ws:e)mmape/ws:adverb
 2e)moi e)moi/:e)gw/:pron1:masc/fem:dat:1st:sg
 2e)moige e)/moige:e)gw/:pron1:masc/fem:dat:1st:sg
+2e)mos e)mo/s:e)mo/s:pron1:masc/fem:nom:1st:sg
 2e)mou e)mou=:e)gw/:pron1:masc/fem:gen:1st:sg
 2e)mpa e)/mpa:e)/mpas:adverb:poetic
 2e)mpali e)/mpali:e)/mpalin:adverb:*anth.:poetic
@@ -16396,6 +16397,7 @@
 2h(meiwn h(mei/wn:e)gw/:pron1:masc/fem:gen:1st:pl:epic
 2h(merolegdon h(merolegdo/n:h(merolegdo/n:adverb
 2h(meteronde h(me/tero/nde:h(me/teros:adverb
+2h(meteros h(me/teros:h(me/teros:pron1:masc/fem:nom:1st:pl
 2h(mewn h(me/wn:e)gw/:pron1:masc/fem:gen:1st:pl:epic:ionic
 2h(min h(/min:e)gw/:pron1:masc/fem:dat:1st:pl:epic h(=min:e)gw/:pron1:masc/fem:dat:1st:pl:attic:poetic h(=min:e)gw/:pron1:masc/fem:dat:1st:pl:epic h(mi/n:e)gw/:pron1:masc/fem:dat:1st:pl:attic:poetic h(mi=n:e)gw/:pron1:masc/fem:dat:1st:pl
 2h(mirropws h(mirro/pws:h(mirro/pws:adverb
@@ -17377,7 +17379,7 @@
 2o(qiper o(/qiper:o(/qi:adverb
 2o(qouneka o(qou/neka:o(qou/neka:conj
 2o(rmhdon o(rmhdo/n:o(rmhdo/n:adverb
-2o(s o(/s:o(/s:relative:masc:nom:sg
+2o(s o(/s:o(/s2:pron1:masc/fem:nom:3rd:sg o(/s:o(/s:relative:masc:nom:sg
 2o(sakis o(sa/kis:o(sa/kis:adverb
 2o(saxh o(saxh=:o(saxh=:adverb
 2o(saxh| o(saxh=|:o(saxh=|:adverb
@@ -18497,6 +18499,7 @@
 2sfela sfe/la:sfe/las:irreg_decl3:neut:nom/voc/acc:pl:epic
 2sfelas sfe/las:sfe/las:irreg_decl3:neut:nom/voc/acc:sg:epic
 2sfendonhdon sfendonhdo/n:sfendonhdo/n:adverb
+2sfeteros sfe/teros:sfe/teros:pron1:masc/fem:nom:3rd:pl
 2sfewn :sfei=s:pron3:masc/fem:gen:pl:enclitic sfe/wn:sfei=s:pron3:masc/fem:gen:pl
 2sfi :sfei=s:pron3:masc/fem:dat:pl:enclitic
 2sfin :sfei=s:pron3:masc/fem:dat:pl:enclitic:nu_movable
@@ -18543,6 +18546,7 @@
 2skwr skw=r:skw=r:irreg_decl3:neut:nom/voc/acc:sg
 2smhnhdon smhnhdo/n:smhnhdo/n:adverb
 2soi :su/:pron1:dat:2nd:sg:enclitic soi/:su/:pron1:dat:2nd:sg
+2sos so/s:so/s:pron1:masc/fem:nom:2nd:sg
 2sou :su/:pron1:gen:2nd:sg:enclitic sou=:sou=:exclam sou=:su/:pron1:gen:2nd:sg
 2spaka spa/ka:spa/ka:indecl
 2spaniakis spania/kis:spania/kis:adverb
@@ -19217,6 +19221,7 @@
 2u(meiwn u(mei/wn:su/:pron1:gen:2nd:pl:epic
 2u(mes u(_me/s:su/:pron1:nom:2nd:pl:doric
 2u(meteronde u(me/tero/nde:u(me/teros:adverb
+2u(meteros u(me/teros:u(me/teros:pron1:masc/fem:nom:2nd:pl
 2u(mewn u(_me/wn:su/:pron1:gen:2nd:pl:epic:doric
 2u(min u(/min:su/:pron1:dat:2nd:pl:epic:poetic u(=min:su/:pron1:dat:2nd:pl:doric u(mi/n:su/:pron1:dat:2nd:pl:poetic u(mi=n:su/:pron1:dat:2nd:pl
 2u(mmin u(/mmin:su/:pron1:dat:2nd:pl:poetic
