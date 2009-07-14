@@ -51,7 +51,7 @@ AttributeEntry	alpheiosPofsOrder[] =
 	{"verb",		"3"},
 	{"adverb",		"2"},
 	{"preposition",	"1"},
-	{NULL,			" "}
+	{NULL,			"0"}
 };
 
 MorphEntry	alpheiosDeclNames[] =
@@ -91,7 +91,7 @@ AttributeEntry	alpheiosCaseOrder[] =
 	{"ablative",	"3"},
 	{"locative",	"2"},
 	{"vocative",	"1"},
-	{NULL,			" "}
+	{NULL,			"0"}
 };
 
 MorphEntry	alpheiosComparisonNames[] =
