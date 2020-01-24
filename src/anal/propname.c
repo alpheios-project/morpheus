@@ -15,7 +15,6 @@ main(void)
 	char newname[BUFSIZ];
 	
 	int rval;
-	int lastchar;
 	long freemem = 0;
 	long nwords = 0;
 	long nhits = 0;
@@ -23,27 +22,15 @@ main(void)
 	fname[0] = 0;
 
 	fprintf(stderr,"use stdout? ");
-	fgets(line, BUFSIZ*4, stdin);
-
-	/* remove trailing newline */
-	lastchar = strlen(line);
-	if (lastchar > 0)
-		--lastchar;
-	if (line[lastchar] == '\n')
-		line[lastchar] = '\0';
-
+	gets(line);
+	
 	if(line[0] == 'y' ) {
 		fprintf(stderr,"type in forms\n");
 		strcpy(outname,"out.morph");
 		finput = stdin;
 	} else {
 		fprintf(stderr,"word file? ");
-		fgets(fname, BUFSIZ, stdin);
-		lastchar = strlen(fname);
-		if (lastchar > 0)
-			--lastchar;
-		if (fname[lastchar] == '\n')
-			fname[lastchar] = '\0';
+		gets(fname);
 		
 		strcpy(inpname,fname);
 		strcat(inpname,".words");
@@ -72,12 +59,7 @@ main(void)
 			
 			if( ! fname[0] ) {
 				printf("basename? ");
-				fgets(fname, BUFSIZ, stdin);
-				lastchar = strlen(fname);
-				if (lastchar > 0)
-					--lastchar;
-				if (fname[lastchar] == '\n')
-					fname[lastchar] = '\0';
+				gets(fname);
 			}
 			strcpy(tmp,fname);
 			strcat(tmp,".enames");

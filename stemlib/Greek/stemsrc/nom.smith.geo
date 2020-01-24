@@ -1995,11 +1995,17 @@ stemacc:*)aki/la
 :le:*)alou/ntion
 :no:*)alounti os_ou neut
 
-:le:*)alpeina
-:no:*)alpein a_hs fem
+:le:*)alpeina/
+:no:*)alpein os_ou neut suff_acc pl
 
 :le:*)alphno/s
 :no:*)alphn os_ou masc suff_acc suff_acc
+
+:le:*)apenni=nos
+:no:*)apenni_n os_ou masc stem_acc place
+
+:le:*)eruqrai/
+:no:*)eruqr	h_hs fem pl suff_acc geog_name
 
 #noanalysis:*)alphno\s
 
@@ -4644,7 +4650,7 @@ stemacc:*au)fidh/na
 :no:*au)qhtan os_ou masc suff_acc pl suff_acc
 
 :le:*au)ra/sion
-:no:*au)rasi os_ou neut
+:no:*au)rasi os_ou neut geog_name
 
 :le:*au)rani=tis
 :no:*au)rani_t is_idos fem stem_acc
@@ -5153,7 +5159,11 @@ stemacc:*baria/na
 :no:*belwni os_ou masc
 
 :le:*benebento/s
-:no:*benebent os_ou masc suff_acc suff_acc
+:no:*benebent os_ou masc suff_acc 
+:no:*benebent os_ou masc 
+
+:le:sunophdo/s
+:aj:sunophd os_on suff_acc
 
 :le:*beneouento/n
 :no:*beneouent os_ou neut suff_acc suff_acc
@@ -5548,7 +5558,7 @@ stemacc:*bita/ca
 :no:*boui+z a_hs fem
 
 :le:*bou/lla
-:no:*boull a_hs fem
+:no:*boull a_hs fem geog_name
 
 :le:*bou/pordmos
 :no:*boupordm os_ou masc
@@ -5707,9 +5717,6 @@ stemacc:*boumw/dos
 
 :le:*brasia/ths
 :no:*brasiat hs_ou masc
-
-:le:*braxma/nwn
-:no:*braxman wn_onos masc
 
 #noanalysis:*braxma=nes
 
@@ -6234,7 +6241,7 @@ stemacc:*deobrigou/la
 :no:*didour os_ou masc pl
 
 :le:*di/duma
-:no:*didum a_hs fem
+:no:*didum os_ou neut pl 
 
 :le:*di/erna
 :no:*diern a_hs fem
@@ -8373,7 +8380,7 @@ stemacc:*kana/sis
 :no:*kappado c_kos masc ant_acc
 
 :le:*kappado/khs
-:no:*kappadok hs_ou masc
+:no:*kappadok hs_ou masc stem_acc
 
 :le:*kaprari/a
 :no:*kaprari a_hs fem
@@ -13374,7 +13381,7 @@ stemacc:*ou)istou/la
 :no:*parq os_ou neut
 
 :le:*pa/rqos
-:no:*parq os_ou masc
+:no:*parq os_ou masc is_ethnic
 
 :le:*pa/rwpos
 :no:*parwp os_ou masc
@@ -13465,6 +13472,8 @@ stemacc:*paga/la
 
 :le:*palaistino/s
 :no:*palaistin os_ou masc suff_acc suff_acc
+# we find *palaisti/nous as the form in Josephus
+:no:*palaisti_n os_ou masc stem_acc
 
 :le:*pali/kwn
 :no:*palik wn_onos masc
@@ -14175,7 +14184,10 @@ stemacc:*pisigga/ra
 :no:*port a_hs fem
 
 :le:*po/rtos
-:no:*port os_ou masc
+:no:*port os_ou masc geog_name
+
+:le:*)/anths
+:no:*)ant hs_ou masc is_ethnic
 
 :le:*po/tana
 :no:*potan a_hs fem
@@ -16025,9 +16037,6 @@ stemacc:*sirbwni/dos
 :le:*ski/a
 :no:*ski a_hs fem
 
-:le:*ski/piwnos
-:no:*skipiwn os_ou masc
-
 :le:*skia/qios
 :no:*skiaqi os_ou masc
 
@@ -16539,7 +16548,7 @@ stemacc:*sousouda/ta
 :no:*suqarit hs_ou masc
 
 :le:*surakou=sai
-:no:*surakou_s h_hs fem pl
+:no:*surakou_s h_hs fem pl stem_acc
 
 :le:*suria/s
 :no:*suri hs_ou masc suff_acc suff_acc

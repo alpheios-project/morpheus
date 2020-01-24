@@ -10,15 +10,7 @@ main()
 	char curw[BUFSIZ];
 	char *hp;
 
-	while(fgets(line, BUFSIZ, stdin)) {
-
-		/* remove trailing newline */
-		int lastchar = strlen(line);
-		if (lastchar > 0)
-			--lastchar;
-		if (line[lastchar] == '\n')
-			line[lastchar] = '\0';
-
+	while(gets(line)) {
 		strcpy(savel,line);
 		hp = strtok(line," \t");
 		if( ! hp ) continue;

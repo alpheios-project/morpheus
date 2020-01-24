@@ -1,7 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include <stdlib.h>
 #include "smk2beta.h"
 
 #define MAXCHAR 		256
@@ -248,36 +248,36 @@ trap_upper(char *res, char *s)
 	}
 
 	tmp[0] = 0;
-	if( SMK_ALPHA((unsigned char) *s) ) {
+	if( SMK_ALPHA(*s) ) {
 		add_acc(tmp, *s - ALPHA_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"a");
-	} else if( SMK_EPSILON((unsigned char) *s) ) {
+	} else if( SMK_EPSILON(*s) ) {
 		add_acc(tmp, *s - EPSILON_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"e");
-	} else if( SMK_IOTA((unsigned char) *s) ) {
+	} else if( SMK_IOTA(*s) ) {
 		add_acc(tmp, *s - IOTA_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"i");
-	} else if( SMK_OMICRON((unsigned char) *s) ) {
+	} else if( SMK_OMICRON(*s) ) {
 		add_acc(tmp, *s - OMICRON_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"o");
-	} else if( SMK_UPSILON((unsigned char) *s) ) {
+	} else if( SMK_UPSILON(*s) ) {
 		add_acc(tmp, *s - UPSILON_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"u");
-	} else if( SMK_ETA((unsigned char) *s) ) {
+	} else if( SMK_ETA(*s) ) {
 		add_acc(tmp, *s - ETA_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"h");
-	} else if( SMK_WMEGA((unsigned char) *s) ) {
+	} else if( SMK_WMEGA(*s) ) {
 		add_acc(tmp, *s - WMEGA_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"w");
-	} else if( SMK_AISUB((unsigned char) *s) ) {
+	} else if( SMK_AISUB(*s) ) {
 		add_acc(tmp, *s - AISUB_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"_");
 		strcat(tmp,"a");
-	} else if( SMK_EISUB((unsigned char) *s) ) {
+	} else if( SMK_EISUB(*s) ) {
 		add_acc(tmp, *s - EISUB_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"_");
 		strcat(tmp,"h");
-	} else if( SMK_WISUB((unsigned char) *s) ) {
+	} else if( SMK_WISUB(*s) ) {
 		add_acc(tmp, *s - WISUB_ACUTE + SPACE_ACUTE);
 		strcat(tmp,"_");
 		strcat(tmp,"w");

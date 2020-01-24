@@ -6013,8 +6013,8 @@
 :de:dwri euw pass comp_only
 :de:dwri ow_denom pass comp_only
 
-:le:*dwri/zw
-:de:*dwr izw
+:le:dwri/zw
+:de:dwr izw
 ;pr
 ;pr,-isd doric
 ;fu,-is
@@ -13561,6 +13561,7 @@
 :de:meig numi
 ;pr
 :de:meig reg_conj
+;pr
 ;fu
 ;ao
 ;fp
@@ -17331,6 +17332,7 @@
 ;fu mid
 ;ao
 ;ao epic unaugmented
+:vs:pluq aor_pass
 
 :le:plwi/zw
 :de:plw izw

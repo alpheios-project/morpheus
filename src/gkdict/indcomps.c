@@ -20,15 +20,7 @@ main()
 	char * s;
 	char * tailp;
 
-	while(fgets(line, 5000, stdin)) {
-
-		/* remove trailing newline */
-		int lastchar = strlen(line);
-		if (lastchar > 0)
-			--lastchar;
-		if (line[lastchar] == '\n')
-			line[lastchar] = '\0';
-
+        while(gets(line)) {
 		Gstr = Blnk;
 		if( !strncmp(":le:",line,4) ) strcpy(curlemma,line+4);
 		if( strncmp(":aj:",line,4) &&  strncmp(":no:",line,4) ) {

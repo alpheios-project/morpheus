@@ -1,3 +1,38 @@
+:le:*stra/bwn
+:no:*strabw n_nos masc pers_name
+
+:le:*(/abramos
+:no:*(abram os_ou masc pers_name
+
+:le:*)idoumai=os
+:no:*)idoumai os_h_on stem_acc ethnic
+
+:le:*ai)soni/dhs
+:no:*ai)sonid hs_ou masc pers_name
+
+:le:*dolabe/llas
+:no:*dolabell hs_ou masc pers_name
+:no:*dolobell hs_ou masc pers_name
+
+:le:*koma/tas
+:no:*koma_t hs_ou masc stem_acc pers_name
+:no:*komht hs_ou masc stem_acc pers_name
+
+:le:*)iw/abos
+:no:*)iwab os_ou masc pers_name
+
+:le:*kelti/bhr
+:no:*keltibh r_ros masc fem ethnic
+
+:le:*leu/kollos
+:no:*leukoll os_ou masc pers_name
+
+:le:*pasi/wn
+:no:*pasiw n_nos masc pers_name
+
+:le:*samouh=los
+:no:*samouhl os_ou masc stem_acc pers_name
+
 :le:a)adh/s
 :aj:a)ad hs_es suff_acc
 
@@ -2188,8 +2223,8 @@
 :le:*)adw/neios
 :aj:*)adwnei os_h_on
 
-:le:*)adwnia/
-:no:*)adwni os_ou neut pl
+:le:*)adw/nia
+:no:*)adwni os_ou neut pl is_festival
 
 :le:*)adwniako/s
 :aj:*)adwniak os_h_on suff_acc
@@ -18731,7 +18766,7 @@
 :no:*)arab is_idos fem suff_acc
 
 :le:*)arabisti/
-:wd:*)arabisti/ adverb
+:wd:*)arabisti/ adverb language
 
 :le:a)rabi/s
 :no:a)rab is_idos fem suff_acc
@@ -18944,7 +18979,7 @@
 :no:a)rgoqanat os_on
 
 :le:*)argolisti/
-:wd:*)argolisti/ adverb
+:wd:*)argolisti/ adverb language
 
 :le:a)rgome/twpos
 :no:a)rgometwp os_on
@@ -19664,7 +19699,7 @@
 :no:*)armeniarx hs_ou masc stem_acc
 
 :le:*)armenisti/
-:wd:*)armenisti/ adverb
+:wd:*)armenisti/ adverb language
 
 :le:*)arme/nion
 :no:*)armeni os_ou neut
@@ -23083,9 +23118,6 @@
 :le:*au)so/nios
 :aj:*au)soni os_h_on
 
-:le:*au)so/nioi
-:no:*au)soni os_ou masc pl
-
 :le:*au)soni/s
 :no:*au)son is_idos fem suff_acc
 
@@ -25126,9 +25158,6 @@
 :le:*babulw/n
 :no:*babulw n_nos masc stem_acc
 
-:le:*babulw/nioi
-:no:*babulwni os_ou masc pl
-
 :le:*babulwneu/s
 :no:*babulwn eus_ews masc suff_acc
 
@@ -25410,9 +25439,6 @@
 
 :le:*bakxei=os
 :aj:*bakxei os_h_on
-
-:le:*ba/kxios
-:aj:*bakxi os_h_on
 
 :le:*bakxei=a
 :no:*bakxei os_ou neut pl stem_acc
@@ -27131,7 +27157,7 @@
 :no:bordw n_nos masc stem_acc
 
 :le:*borea/dhs
-:no:*boread hs_ou masc stem_acc
+:no:*boread hs_ou masc stem_acc is_group
 
 :le:*boreia/s
 :no:*boreia s_dos fem stem_acc
@@ -53799,7 +53825,7 @@
 :no:*(esperi_t hs_ou masc stem_acc
 
 :le:*(esperi=tis
-:no:*(esperi_t is_idos fem stem_acc
+:no:*(esperi_t is_idos fem stem_acc geog_name
 
 :le:*(espero/qen
 :wd:*(espero/qen adverb
@@ -59511,7 +59537,7 @@
 :aj:h)lektrwd hs_es stem_acc
 
 :le:*(hlia/dhs
-:no:*(hliad hs_ou masc stem_acc
+:no:*(hliad hs_ou masc stem_acc is_group
 
 :le:*(hliai=a
 :no:*(hliai os_ou neut pl stem_acc
@@ -60737,9 +60763,6 @@
 :le:h)raiwme/nws
 :wd:h)raiwme/nws adverb
 
-:le:*(hraklei=dai
-:no:*(hrakleid hs_ou masc pl stem_acc
-
 :le:h)pioh/ios
 :aj:h)piohi os_h_on
 
@@ -60927,7 +60950,7 @@
 :wd:hu)tomatisme/nws adverb
 
 :le:*(hfaistei=on
-:no:*(hfaistei os_ou neut stem_acc
+:no:*(hfaistei os_ou neut stem_acc buildingname
 
 :le:*(hfai/stia
 :no:*(hfaisti os_ou neut pl
@@ -65013,13 +65036,10 @@
 :no:*)ind is_idos fem suff_acc
 
 :le:*)indisti/
-:wd:*)indisti/ adverb
+:wd:*)indisti/ adverb language
 
 :le:*)indogenh/s
 :aj:*)indogen hs_es suff_acc
-
-:le:*)indh/
-:no:*)ind h_hs fem suff_acc
 
 :le:*)indoskuqi/a
 :no:*)indoskuqi h_hs fem
@@ -66747,7 +66767,7 @@
 :no:i)wnisk os_ou masc stem_acc
 
 :le:*)iwnisti/
-:wd:*)iwnisti/ adverb
+:wd:*)iwnisti/ adverb language
 
 :le:*)iwnoka/mpths
 :no:*)iwnokampt hs_ou masc stem_acc
@@ -69129,7 +69149,7 @@
 :aj:kapanik os_h_on suff_acc
 
 :le:*kapetw/lion
-:no:*kapetwli os_ou neut
+:no:*kapetwli os_ou neut building_name
 
 :le:*kapetw/lios
 :no:*kapetwli os_ou masc
@@ -69426,7 +69446,7 @@
 :no:karioqrept os_on
 
 :le:*karisti/
-:wd:*karisti/ adverb
+:wd:*karisti/ adverb language
 
 :le:*kari/wn
 :no:*kariw n_nos masc
@@ -69747,7 +69767,7 @@
 :no:karu^ h_hs fem
 
 :le:*karua=tis
-:no:*karua_t is_idos fem stem_acc
+:no:*karua_t is_idos fem stem_acc is_group
 
 :le:*karua/teia
 :no:*karua_tei os_ou neut pl
@@ -79671,7 +79691,7 @@
 :no:kunokefali os_ou neut
 
 :le:kunokefalisti/
-:wd:kunokefalisti/ adverb
+:wd:kunokefalisti/ adverb language
 
 :le:kunokefaloke/rdwn
 :no:kunokefalokerdw n_nos masc
@@ -81280,9 +81300,6 @@
 
 :le:*lati/nh
 :no:*latin h_hs fem
-
-:le:*latinos
-:aj:*latin os_h_on
 
 :le:*la/tion
 :no:*lati os_ou neut
@@ -84168,7 +84185,7 @@
 :no:lokal os_ou masc
 
 :le:*lokristi/
-:wd:*lokristi/ adverb
+:wd:*lokristi/ adverb language
 
 :le:*lokriko/s
 :aj:*lokrik os_h_on suff_acc
@@ -84944,7 +84961,10 @@
 :le:magmo/s
 :no:magm os_ou suff_acc masc
 
-:le:*magnhsi/h
+:le:*au)/ra
+:no:*au)r h_hs fem pers_name
+
+:le:*magnhsi/a
 :no:*magnhsi h_hs fem
 
 :le:*magnhtiko/s
@@ -87486,7 +87506,7 @@
 :no:melist hs_ou masc suff_acc
 
 :le:melisti/
-:wd:melisti/ adverb
+:wd:melisti/ adverb language
 
 :le:*melitai=os
 :aj:*melitai os_h_on
@@ -89049,7 +89069,7 @@
 :no:mhdi os_ou neut
 
 :le:*mhdisti/
-:wd:*mhdisti/ adverb
+:wd:*mhdisti/ adverb language
 
 :le:mhdo/lws
 :wd:mhdo/lws adverb
@@ -95118,7 +95138,7 @@
 :aj:*nu_si os_h_on
 
 :le:*nusai=oi
-:no:*nusai os_ou masc pl stem_acc
+:no:*nusai os_ou masc pl stem_acc is_ethnic
 
 :le:nu/sa
 :no:nus h_hs fem
@@ -95292,7 +95312,7 @@
 :no:canq h_hs fem
 
 :le:*canqi/as
-:no:*canqi hs_ou masc stem_acc
+:no:*canqi hs_ou masc stem_acc pers_name
 
 :le:ca/nqion
 :no:canqi os_ou neut
@@ -103818,7 +103838,7 @@
 :no:panafqon os_on
 
 :le:*panaxaia/
-:no:*panaxai h_hs fem suff_acc
+:no:*panaxai h_hs fem suff_acc sg geog_name
 
 :le:pana/wros
 :no:panawr os_on
@@ -111102,10 +111122,14 @@
 :aj:*phlei os_h_on
 
 :le:*phlei/dhs
-:no:*phleid hs_ou masc stem_acc
+:no:*phleid hs_ou masc stem_acc pers_name
+
+:le:*porqeu/s
+:no:*porq eus_ews suff_acc masc pers_name
 
 :le:*phlei/wn
-:no:*phleiw n_nos masc
+:no:*phleiw n_nos masc stem_acc  pers_name
+:wd:*phlei/+wna/de adverb pers_name
 
 :le:*phlia/s
 :no:*phlia s_dos fem stem_acc
@@ -115708,9 +115732,6 @@
 
 :le:*potei/daia
 :no:*poteidai a_hs fem
-
-:le:*poteidea=tai
-:no:*poteidea_t hs_ou masc pl stem_acc
 
 :le:*poteideatiko/s
 :aj:*poteideatik os_h_on suff_acc
@@ -133045,6 +133066,7 @@
 
 :le:*sura/kousa
 :no:*surakous a_hs fem
+:no:*surakouss a_hs fem
 
 :le:*surakoseu/s
 :no:*surakos eus_ews masc suff_acc
@@ -137004,7 +137026,7 @@
 :no:*titanolet hs_ou masc stem_acc
 
 :le:*titanomaxi/a
-:no:*titanomaxi h_hs fem
+:no:*titanomaxi h_hs fem is_title
 
 :le:titanwto/s
 :aj:titanwt os_h_on suff_acc
@@ -140022,7 +140044,7 @@
 :no:turoforei os_ou neut stem_acc
 
 :le:*turrhniko/s
-:aj:*turrhnik os_h_on suff_acc
+:aj:*turrhnik os_h_on suff_acc is_ethnic
 
 :le:*turrhnikourgh/s
 :aj:*turrhnikourg hs_es suff_acc
@@ -140031,7 +140053,7 @@
 :no:*turrhn is_idos fem suff_acc
 
 :le:*turrhno/s
-:aj:*turrhn os_h_on suff_acc
+:aj:*turrhn os_h_on suff_acc is_ethnic
 
 :le:turri/dion
 :no:turridi os_ou neut
@@ -149460,7 +149482,7 @@
 :aj:*xaldaik os_h_on suff_acc
 
 :le:*xaldaisti/
-:wd:*xaldaisti/ adverb
+:wd:*xaldaisti/ adverb language
 
 :le:xaleptu/s
 :no:xalept us_uos fem suff_acc

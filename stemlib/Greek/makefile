@@ -8,25 +8,7 @@ STEMPROG= stemsrc/stripref stemsrc/zapfirstf stemsrc/headnolen \
 # Get all noms files, but without emacs backups
 nomsrc= $(filter-out %~,$(wildcard stemsrc/nom.* stemsrc/nom[0-9]*))
 
-all: setup $(STEMPROG) ends noms vbs deriv
-
-setup:
-	[ -d derivs/ascii ] || mkdir derivs/ascii
-	[ -d derivs/indices ] || mkdir derivs/indices
-	[ -d derivs/out ] || mkdir derivs/out
-	[ -d endtables/ascii ] || mkdir endtables/ascii
-	[ -d endtables/indices ] || mkdir endtables/indices
-	[ -d endtables/out ] || mkdir endtables/out
-	[ -d steminds ] || mkdir steminds
-
-clean:
-	[ -d derivs/ascii ] && rm -fr derivs/ascii
-	[ -d derivs/indices ] &&  rm -fr derivs/indices
-	[ -d derivs/out ] && rm -fr derivs/out
-	[ -d endtables/ascii ] && rm -fr endtables/ascii
-	[ -d endtables/indices ] && rm -fr endtables/indices
-	[ -d endtables/out ] && rm -fr endtables/out
-	[ -d steminds ] && rm -fr steminds
+all: $(STEMPROG) ends noms vbs deriv 
 
 ends: nends vends
 
@@ -46,9 +28,12 @@ deriv:
 	buildderiv all
 	indderivtables
 
-noms:	stemsrc/nom.irreg stemind/nomind
+noms:	stemsrc/nom.irreg stemind/nomind 
 
 vbs:	stemsrc/lsj.vbs stemsrc/vbs.irreg stemind/vbind
+
+enclitics:  
+	cat stemsrc/vbs.irreg stemsrc/nom* | fgrep enclitic > enclitics
 
 stemind/vbind:
 	cat stemsrc/vbs.irreg stemsrc/vbs.simp.ml stemsrc/vbs.simp.02.new stemsrc/lsj.vbs \
@@ -68,10 +53,15 @@ stemsrc/lemlist:
 	    stemsrc/vbs.simp.ml stemsrc/vbs.simp.02.new | fgrep ":le:" | \
 	    cut -d":" -f 3 | sort | awk '{print $$1 " "}' > stemsrc/lemlist
 
-stemind/nomind:	stemsrc/lsj.nom
-	cat $(nomsrc) stemsrc/lsj.nom \
+stemind/nomind:	stemsrc/lsj.nom getentities.pl
+	./addconstraints.pl $(nomsrc) stemsrc/lsj.nom \
 	    stemsrc/lsj.byhand > /tmp/nommorph
+	./getentities.pl /tmp/nommorph  > steminds/entitylist.txt
 	indexnoms
+
+entities: stemsrc/entitylist-byhand.txt
+	./getentities.pl stemsrc/entitylist-byhand.txt  $(nomsrc) stemsrc/lsj.nom stemsrc/lsj.byhand > steminds/entitylist.txt
+	
 
 ia.noms:
 	echo "[aehuwo]i h_hs" > /tmp/skip.ia
@@ -91,3 +81,4 @@ lsj.morph:	${LSJDIR}/lemmata
 	cp /tmp/lsj.vbs stemsrc
 	fgrep -v "0:" /tmp/lsj.morph > stemsrc/lsj.nom
 	cp /tmp/lsj.morph .
+

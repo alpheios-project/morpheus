@@ -42,15 +42,7 @@ char * argv[];
 	strcpy(filename,"conjfile");
 	if( (f=fopen(filename,"r")) == NULL ) {
 		fprintf(stdout,"Filename?\n" );
-
-		/* get filename and remove trailing newline */
-		fgets(filename, 80, stdin);
-		int lastchar = strlen(filename);
-		if (lastchar > 0)
-			--lastchar;
-		if (filename[lastchar] == '\n')
-			filename[lastchar] = '\0';
-
+		gets(filename);
 		if( (f=fopen(filename,"r")) == NULL ) {
 			fprintf(stderr,"Could not open [%s]\n", filename );
 			exit(-1);

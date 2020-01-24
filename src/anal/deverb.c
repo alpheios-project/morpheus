@@ -23,15 +23,7 @@ main()
 	char reskeys[BUFSIZ];
 	int rval;
 
-	while(fgets(line, BUFSIZ, stdin)) {
-
-		/* remove trailing newline */
-		int lastchar = strlen(line);
-		if (lastchar > 0)
-			--lastchar;
-		if (line[lastchar] == '\n')
-			line[lastchar] = '\0';
-
+	while(gets(line)) {
 		transkeys[0] = keys[0] = reskeys[0] = 0;
 		strcpy(tmp,line);
 		s = line;

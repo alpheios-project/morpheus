@@ -2,10 +2,13 @@
 
 #include "trimwhite.proto.h"
 
-void	trimwhite(char *s)
+trimwhite(char *s)
 {
-	char*	ptr = s + strlen(s);
-	while ((ptr > s) && isspace(*--ptr))
-		*ptr = '\0';
+	char * starts;
+
+	starts = s;
+	while(*s) s++; s--;
+	while(isspace(*s) && s > starts )
+		*s-- = 0;
 }
 

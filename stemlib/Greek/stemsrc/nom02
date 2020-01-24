@@ -1036,7 +1036,9 @@
 
 :le:di=nos
 :no:di_n os_ou masc
-:no:*di_n os_ou masc
+
+:le:*di=nos
+:no:*di_n os_ou masc pers_name sg
 
 :le:dinw/dhs
 :aj:di_n-wd hs_es stem_acc
@@ -1109,14 +1111,14 @@
 :no:*dionu^si os_ou neut pl
 
 :le:*dionusiako/s
-:aj:*dionu_siak os_h_on suff_acc
+:aj:*dionu_siak os_h_on suff_acc is_group
 
 :le:*dionusia/s
-:no:*dionu_sia s_dos stem_acc   fem
+:no:*dionu_sia s_dos stem_acc   fem is_festival
 
 :le:*dio/nusos
-:no:*dionu_s os_ou masc
-:no:*diwnu_s os_ou masc epic
+:no:*dionu_s os_ou masc pers_name
+:no:*diwnu_s os_ou masc epic pers_name
 
 :le:*dio/pais
 :no:*dio-pai s_dos masc 	ant_acc
@@ -1183,8 +1185,10 @@
 :no:dioskorei os_ou neut
 
 :le:*dio/skoroi
-:no:dios-kor os_ou masc pl
-:no:dios-kour os_ou masc pl ionic
+:no:*dios-kor os_ou masc is_group
+:no:dios-kor os_ou masc is_group
+:no:*dios-kour os_ou masc ionic is_group
+:no:dios-kour os_ou masc ionic is_group
 
 :le:dio/ti
 :wd:di-o/ti conj
@@ -2297,7 +2301,7 @@
 :aj:du^na^t os_on	suff_acc
 
 :le:du/o
-:wd:du/o numeral nom acc dual masc fem neut
+:wd:du/o numeral
 :wd:du/w numeral epic
 :wd:duoi=n numeral gen dat dual masc fem neut
 :wd:duw=n numeral gen dat pl masc fem neut ionic
@@ -3404,7 +3408,7 @@
 :aj:dwrht os_on suff_acc
 
 :le:*dwrieu/s
-:no:*dwri eus_ews,suff_acc,masc
+:no:*dwri eus_ews,suff_acc,masc is_ethnic
 @ end:eis pl
 @ end:hs attic pl
 
@@ -3419,7 +3423,7 @@
 :no:*dwr is_idos suff_acc fem
 
 :le:*dwristi/
-:wd:*dwri^sti/	adverb
+:wd:*dwri^sti/	adverb language
 :wd:dwri^sti/	adverb
 
 :le:dwrodo/khma
@@ -3429,7 +3433,7 @@
 :no:dwrodoki h_hs stem_acc fem
 
 :le:dwrodokisti/
-:wd:dwrodokisti/	adverb
+:wd:dwrodokisti/	adverb language
 
 :le:dwrodo/kos
 :aj:dwro-dok os_on stem_acc
@@ -3565,7 +3569,7 @@
 :aj:*(ebrai+ is_idos fem suff_acc
 
 :le:*(ebraisti/
-:wd:*(ebraisti/ adverb
+:wd:*(ebraisti/ adverb language
 
 :le:e)/ggaios
 :aj:e)g-gai os_h_on
@@ -4233,17 +4237,17 @@
 :no:ei)lu_ os_ou suff_acc masc
 
 :le:*ei(/lws
-:no:*ei(lw s_tos masc
-:no:ei(lw s_tos masc
-:no:ei(lwt hs_ou masc stem_acc
+:no:*ei(lw s_tos masc is_ethnic
+:no:ei(lw s_tos masc is_ethnic
+:no:ei(lwt hs_ou masc stem_acc is_ethnic
 
 :le:*ei(lwtei/a
 :no:*ei(lwtei h_hs stem_acc fem
 :no:ei(lwtei h_hs stem_acc fem
 
 :le:*ei(lwtiko/s
-:aj:*ei(lwtik os_h_on suff_acc
-:aj:ei(lwtik os_h_on suff_acc
+:aj:*ei(lwtik os_h_on suff_acc is_ethnic
+:aj:ei(lwtik os_h_on suff_acc is_ethnic
 
 :le:ei(=ma
 :no:ei( ma_matos neut
@@ -5610,8 +5614,8 @@
 :aj:e)l-lesx os_on
 
 :le:*(/ellhn
-:no:*(ellh n_nos masc fem
-:no:*(ella_ n_nos masc fem doric aeolic
+:no:*(ellh n_nos masc fem is_ethnic
+:no:*(ella_ n_nos masc fem doric aeolic is_ethnic
 
 :le:*(ellhniko/s
 :aj:*(ellhnik os_h_on suff_acc
@@ -5630,7 +5634,7 @@
 :no:*(ellhnist hs_ou suff_acc   masc
 
 :le:*(ellhnisti/
-:wd:*(ellhnisti/	adverb
+:wd:*(ellhnisti/	adverb language
 
 :le:*(ellhnotami/ai
 :no:*(ellhno-ta^mi hs_ou masc pl stem_acc
@@ -5832,7 +5836,6 @@
 :aj:e)m-moxq os_on
 
 :le:e)mo/s
-:wd:e)mo/s pron1 1st masc/fem nom sg
 :aj:e)m os_h_on suff_acc
 
 :le:e)mpaqh/s
@@ -8911,6 +8914,7 @@
 
 :le:e)pitu/mbios
 :aj:e)pitumbi os_on
+:aj:e)pitumbi os_h_on 
 
 :le:e)pifa/neia
 :no:e)pifa^nei a_hs fem
@@ -9533,12 +9537,12 @@
 :aj:ei)rine os_h_on  ionic
 
 :le:*)erinu/s
-:no:*)erin uLs_uos suff_acc,fem
-:no:e)rin uLs_uos suff_acc,fem
-@ end:uos
-@ end:ues
-@ end:u_s contr
-@ end:u=n gen pl attic
+:no:*)erin uLs_uos suff_acc,fem group_name
+:no:e)rin uLs_uos suff_acc,fem group_name
+@ end:uos group_name
+@ end:ues group_name
+@ end:u_s contr group_name
+@ end:u=n gen pl attic group_name
 
 :le:e)/rion
 :no:e)ri os_ou neut
@@ -9648,13 +9652,13 @@
 :aj:e(rmhneutik os_h_on suff_acc
 
 :le:*(ermh=s
-:no:*(erm ehs_eou,masc,suff_acc
+:no:*(erm ehs_eou,masc,suff_acc,pers_name
 @ end:h=n acc
 @ end:h=| dat
 @ end:h= voc
 @ end:e/w epic gen
 @ end:ei/w epic gen
-:no:*(ermei hs_ou masc
+:no:*(ermei hs_ou masc,pers_name
 
 :le:*(ermi/dion
 :no:*(ermi_di os_ou neut diminutive
@@ -9794,7 +9798,12 @@
 :le:e)/rws
 :no:e)rw s_tos ,masc
 @ dat
-:no:*)erw s_tos ,masc
+
+:le:*)/erws
+:no:*)erw s_tos masc pers_name
+
+:le:*)/erwtes
+:no:*)erw s_tos masc pl is_group
 
 :le:e)rwta/rion
 :no:e)rwtari os_ou neut diminutive

@@ -278,15 +278,6 @@
 :wd:dru/as   irreg_decl3 fem acc pl
 
 :le:ei(=s
-:wd:ei(=s numeral nom sg masc
-:wd:mi/a numeral nom sg fem
-:wd:e(/n numeral nom acc sg neut
-:wd:e(no/s numeral gen sg masc neut
-:wd:mi/a=s numeral gen sg fem
-:wd:e(ni/ numeral dat sg masc neut
-:wd:mia=| numeral dat sg fem
-:wd:e(/na numeral acc sg masc
-:wd:mi/an numeral acc sg fem
 :wd:ei(=s irreg_decl3 sg masc nom sg
 :wd:h(=s irreg_decl3 sg masc nom sg doric *theocr.
 :wd:e(/n irreg_decl3 sg neut nom voc acc sg
@@ -408,12 +399,12 @@
 :wd:*di_/ irreg_decl3 masc sg pers_name dat
 :wd:*zh=n irreg_decl3 masc sg pers_name acc
 :wd:*dio/qen adverb epic
-:wd:*dios   irreg_decl3 masc gen sg pers_name needs_acc
-:wd:*zhnos   irreg_decl3 masc gen sg pers_name needs_acc poetic
-:wd:*za_nos   irreg_decl3 masc gen sg doric pers_name needs_acc
+:wd:*dio/s   irreg_decl3 masc gen sg pers_name 
+:wd:*zhno/s   irreg_decl3 masc gen sg pers_name poetic
+:wd:*za_no/s   irreg_decl3 masc gen sg doric pers_name 
 :wd:*dii   irreg_decl3 masc dat sg pers_name needs_acc
-:wd:*zhni   irreg_decl3 masc dat sg pers_name needs_acc poetic
-:wd:*za_ni   irreg_decl3 masc dat sg doric pers_name needs_acc
+:wd:*zhni/   irreg_decl3 masc dat sg pers_name needs_acc poetic
+:wd:*za_ni/   irreg_decl3 masc dat sg doric pers_name needs_acc
 :wd:*dia   irreg_decl3 masc acc sg pers_name needs_acc
 :wd:*zhna   irreg_decl3 masc acc sg pers_name needs_acc poetic
 :wd:*za_na   irreg_decl3 masc acc sg doric pers_name needs_acc
@@ -1413,14 +1404,6 @@
 :wd:tri/a numeral nom voc acc pl neut
 :wd:triw=n numeral gen pl masc fem neut
 :wd:trisi/ numeral dat pl masc fem neut
-
-:le:te/ttares
-:wd:te/ttares numeral nom voc pl masc fem
-:wd:te/ttara numeral nom voc acc pl neut
-:wd:tetta/rwn numeral gen pl masc fem neut
-:wd:te/ttarsi numeral dat pl masc fem neut
-:wd:te/ttarsin numeral dat pl masc fem neut
-:wd:te/ttaras numeral acc pl masc fem
 
 :le:u(/dwr
 :wd:u(/dwr irreg_decl3 neut nom voc acc sg

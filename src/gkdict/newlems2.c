@@ -23,15 +23,7 @@ main()
 		exit(-1);
 	}
 
-	while(fgets(line, BUFSIZ, stdin)) {
-
-		/* remove trailing newline */
-		int lastchar = strlen(line);
-		if (lastchar > 0)
-			--lastchar;
-		if (line[lastchar] == '\n')
-			line[lastchar] = '\0';
-
+	while(gets(line)) {
 		if( ! line[0]) continue;
 		if( ! isdigit(line[0])) continue;
 		strcpy(savel,line);

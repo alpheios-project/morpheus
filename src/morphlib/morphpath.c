@@ -1,25 +1,7 @@
 #include <gkstring.h>
 
 #include "morphpath.proto.h"
-static int		f_filesopened = 0;
-static char*	f_morphPath = NULL;
-
-void	SetMorphPath(const char* a_path)
-{
-	/* if old path exists, get rid of it */
-	if (f_morphPath)
-	{
-		free(f_morphPath);
-		f_morphPath = NULL;
-	}
-
-	/* if new path given, save it */
-	if (a_path)
-	{
-		f_morphPath = malloc(strlen(a_path) + 1);
-		strcpy(f_morphPath, a_path);
-	}
-}
+static filesopened = 0;
 
 FILE *
  MorphFopen(char *fname, char *mode)
@@ -27,7 +9,7 @@ FILE *
  	FILE * f;
  	char tmpname[BUFSIZ];
 
- 	f_filesopened++;
+ 	filesopened++;
  	MorphPathName(fname,tmpname);
 
  	if( !(f=fopen(tmpname,mode)) ) {
@@ -44,7 +26,7 @@ FILE *
 
 NumFilesOpened(void)
 {
-	printf("filesopened [%d]\n", f_filesopened );
+	printf("filesopened [%d]\n", filesopened );
 }
 
 /*
@@ -69,7 +51,7 @@ MorphPathName(char *shorts, char *full)
 /*
  	sprintf(full,"/as/fass/faculty/gcrane/morph/stemlib/%s", shorts );
 */
-	s = (f_morphPath ? f_morphPath : getenv("MORPHLIB"));
+	s = getenv("MORPHLIB");
 
 	if( ! s ) {
 		printf("MORPHLIB not set in your environment!\n");

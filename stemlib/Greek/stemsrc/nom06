@@ -350,7 +350,7 @@
 @ end:in
 
 :le:*skuqisti/
-:wd:*sku^qist^i/	adverb
+:wd:*sku^qist^i/	adverb language
 :wd:sku^qist^i/	adverb
 
 :le:*skuqotoco/ths
@@ -588,7 +588,6 @@
 
 :le:so/s
 :aj:s os_h_on suff_acc
-:wd:so/s pron1 2nd masc/fem nom sg
 
 :le:sou=
 :wd:sou= exclam
@@ -644,7 +643,7 @@
 :le:sofi/stria
 :no:sofistri a_hs fem
 
-:le:*sofokle/hs
+:le:*sofoklh=s
 :no:*sofo klehs_kleous,masc,pers_name
 @ end:h_s nom sg
 @ end:e/ous gen sg
@@ -950,6 +949,7 @@
 
 :le:*sta/geiros
 :no:*stageir os_ou fem
+:no:*stagir os_ou fem
 
 :le:*stageirei/ths
 :no:*stageireit hs_ou,stem_acc,masc
@@ -1761,6 +1761,8 @@
 
 :le:*strumw/n
 :no:*stru_m wn_onos suff_acc masc
+
+:le:*strumo/nios
 :aj:*strumoni os_h_on
 :aj:*strumonik os_h_on suff_acc
 
@@ -3264,12 +3266,13 @@
 :le:*su/ra
 :no:*sur h_hs fem
 
-:le:*sura/kousai
+:le:*surakou=sai
 :no:*su^ra_kous h_hs masc fem  pl
 
-:le:*surako/sios
+:le:*surakou/sios
 :aj:*su^ra_kosi os_h_on
 :aj:*su^rhkousi os_h_on ionic
+:aj:*su^rakousi os_h_on 
 :aj:*su^rhkosi os_h_on ionic poetic
 
 :le:*surakosi/a
@@ -3314,7 +3317,7 @@
 :no:su_rist hs_ou suff_acc masc
 
 :le:*suristi/
-:wd:*su^risti/  adverb
+:wd:*su^risti/  adverb language
 
 :le:su/rma
 :no:sur ma_matos neut
@@ -3536,7 +3539,6 @@
 
 :le:sfe/teros
 :aj:sfeter os_h_on
-:wd:sfe/teros pron1 3rd masc/fem nom pl
 
 :le:sfhkia/
 :no:sfhki h_hs suff_acc fem
@@ -4210,9 +4212,6 @@
 :no:taraktr os_ou neut
 :no:ta^rakt wr_oros,masc
 
-:le:*taranti=non
-:no:*taranti_n os_ou stem_acc neut
-
 :le:*tarantini/dion
 :no:*taranti_nidi os_ou neut  diminutive
 
@@ -4311,8 +4310,9 @@
 :wd:tau= indecl neut
 
 :le:*tau/geton
-:no:*tau+get os_ou neut
-:no:*thuget os_ou neut  ionic epic
+:no:*tau+get os_ou neut geog_name
+:no:*thuget os_ou neut  ionic epic geog_name
+:no:*thuget os_ou masc  ionic epic geog_name
 
 :le:tau/reios
 :aj:taurei os_h_on
@@ -5150,7 +5150,7 @@
 :wd:tetra^-podhdo/n	adverb
 
 :le:tetrapodisti/
-:wd:tetra^-podisti/	adverb
+:wd:tetra^-podisti/	adverb language
 
 :le:tetra/polis
 :no:tetra^-pol is_ews fem
@@ -5699,9 +5699,9 @@
 :no:ti^s is_ews fem
 
 :le:*tita/n
-:no:*ti_ta_ n_nos,stem_acc,masc
+:no:*ti_ta_ n_nos,stem_acc,masc group_name
 @ nom pl
-:no:*ti_th n_nos,stem_acc,masc  ionic
+:no:*ti_th n_nos,stem_acc,masc  ionic group_name
 @ nom pl
 @ dat pl end:si
 @ dat pl end:nessi epic
@@ -6271,6 +6271,7 @@
 
 :le:tragw|dopoio/s
 :no:tra^gw|do-poi os_ou suff_acc masc
+:no:tra^gw|dio-poi os_ou suff_acc masc
 
 :le:tragw|do/s
 :no:tra^g-w|d os_ou suff_acc masc
@@ -7050,13 +7051,13 @@
 :no:*trwi h_hs fem  doric
 
 :le:*troi/aqen
-:wd:*troi/a_qen adverb
-:wd:*troi/hqen adverb ionic epic
+:wd:*troi/a_qen adverb geog_name
+:wd:*troi/hqen adverb ionic epic geog_name
 
 :le:*troi/ande
-:wd:*troi/a_nde adverb
-:wd:*troi/hnde adverb  ionic epic
-:wd:*trw/|ande adverb  ionic
+:wd:*troi/a_nde adverb geog_name
+:wd:*troi/hnde adverb  ionic epic geog_name
+:wd:*trw/|ande adverb  ionic geog_name
 
 :le:*troizh/n
 :no:*troizh n_nos stem_acc fem
@@ -7315,8 +7316,8 @@
 :aj:*trwo-fqor os_on stem_acc
 
 :le:*trw/s
-:no:*trw s_os masc
-@ gen masc pl contr
+:no:*trw s_os masc is_ethnic
+@ gen masc pl contr is_ethnic
 
 :le:trwto/s
 :aj:trwt os_h_on suff_acc
@@ -7402,13 +7403,15 @@
 :le:tu/mpanon
 :no:tumpa^n os_ou neut
 
-:le:*tunda/reos
+:le:*tunda/rews
 :no:*tundare os_ou masc
 :no:*tundare ws_w masc  attic
-:no:*tundari^d hs_ou stem_acc masc
 :aj:*tundare os_h_on
 :aj:*tundare os_on
 :no:*tundar is_idos suff_acc fem
+
+:le:*tundari/dhs
+:no:*tundari^d hs_ou stem_acc masc
 
 :le:tunno/s
 :aj:tunn os_h_on suff_acc
@@ -7503,10 +7506,10 @@
 :le:*turrhnole/ths
 :no:*turrhn-olet hs_ou stem_acc masc
 
-:le:*turshno/s
-:aj:*turshn os_h_on suff_acc   ionic attic
-:aj:*turshnik os_h_on suff_acc
-:aj:*turrhn os_h_on suff_acc
+:le:*turhhno/s
+:aj:*turshn os_h_on suff_acc   ionic attic is_ethnic
+:aj:*turshnik os_h_on suff_acc is_ethnic
+:aj:*turrhn os_h_on suff_acc is_ethnic
 
 :le:tu/rsis
 :no:turs is_ews,fem
@@ -7610,7 +7613,7 @@
 :no:u(ain a_hs fem
 
 :le:*(uaki/nqia
-:no:*(uakinqi os_ou,neut,pl
+:no:*(uakinqi os_ou,neut,pl,is_festival
 
 :le:u(akinqinobafh/s
 :aj:u(akinqi^no-ba^f hs_es suff_acc
@@ -7926,7 +7929,6 @@
 
 :le:u(me/teros
 :aj:u(_meter os_h_on
-:wd:u(me/teros pron1 2nd masc/fem nom pl
 :wd:u(me/tero/nde adverb
 
 :le:u(mh/n1
@@ -8226,7 +8228,7 @@
 :no:u(per-bol h_hs suff_acc fem
 
 :le:*(uperbo/reoi
-:no:*(uper-bore os_ou masc  pl
+:no:*(uperbore os_ou masc  pl group_name
 
 :le:u(perbriqh/s
 :aj:u(per-bri_q hs_es,suff_acc
@@ -9524,7 +9526,7 @@
 :le:faeqonti/s
 :no:faeqont is_idos suff_acc   	fem
 
-:le:fae/qw
+:le:*fae/qwn
 :no:*faeq wn_ontos,masc,pers_name	stem_acc
 
 :le:faeino/s
@@ -9718,7 +9720,7 @@
 :no:fa^retri os_ou neut   diminutive
 
 :le:*farisai=os
-:no:*farisai_ os_ou stem_acc    masc
+:no:*farisai_ os_ou stem_acc    masc group_name
 
 :le:farmakei/a
 :no:farma^kei h_hs stem_acc fem
@@ -10027,7 +10029,7 @@
 :wd:*fqi/hfi adverb
 
 :le:*fqiw/ths
-:no:*fqi_wt hs_ou stem_acc masc
+:no:*fqi_wt hs_ou stem_acc masc is_ethnic
 
 :le:*fqiw=tis
 :no:*fqi_wt is_idos fem  stem_acc
@@ -11178,7 +11180,7 @@
 :no:foini_kist hs_ou suff_acc masc
 
 :le:*foinikisti/
-:wd:*foini_kisti/	adverb
+:wd:*foini_kisti/	adverb language
 
 :le:foiniko/baptos
 :aj:foini_ko-bapt os_on
@@ -11631,8 +11633,11 @@
 :aj:*fru^gi os_h_on
 :aj:*fru^gi os_on
 
+:le:*frugi/a
+:no:*frugi h_hs fem
+
 :le:*frugisti/
-:wd:fru^gisti/	adverb
+:wd:fru^gisti/	adverb language
 
 :le:frukto/s
 :aj:frukt os_h_on suff_acc
@@ -12188,8 +12193,8 @@
 :le:xalkh/rhs
 :aj:xal-khr hs_es stem_acc
 
-:le:*xalkidei=s
-:no:*xalki^d eus_ews,suff_acc,masc pl
+:le:*xalkideu/s
+:no:*xalki^d eus_ews,suff_acc,masc pl is_ethnic
 
 :le:*xalkidiko/s
 :aj:*xalki^dik os_h_on suff_acc
@@ -12707,8 +12712,11 @@
 :wd:xe/reia wn_on_comp acc pl neut epic irreg_comp
 :aj:xeirist os_h_on   irreg_superl
 
+:le:*xei/rwnes
+:no:*xeirw n_nos masc title
+
 :le:*xei/rwn
-:no:*xeirw n_nos masc
+:no:*xeirw n_nos masc pers_name
 
 :le:xeirw=nac
 :no:xeir-w_na c_ktos ant_acc masc

@@ -6,14 +6,7 @@ main()
 {
 	char line[BUFSIZ*10];
 
-	while(fgets(line, BUFSIZ*10, stdin)) {
-		/* remove trailing newline */
-		int lastchar = strlen(line);
-		if (lastchar > 0)
-			--lastchar;
-		if (line[lastchar] == '\n')
-			line[lastchar] = '\0';
-
+	while(gets(line)) {
 		strcpy(line,line+4);
 		if( is_substring("ew_",line) || is_substring("aw_",line)) {
 			check_ew(line);
