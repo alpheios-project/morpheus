@@ -26,7 +26,7 @@ e@s_sa_n emi_pr pres part act needs_acc
 e@ath_mp_1 emi_pr pres mp ind
 @pr_sub_mp emi_pr pres subj mp needs_acc
 e@ath_mp_2 emi_pr imperf mp ind
-e@imhn_opt emi_pr pres opt mp
+e@imhn_opt emi_pr pres opt mp needs_acc
 ou emi_pr pres imperat mp 2nd sg
 e@ath_imp_mp emi_pr pres imperat mp
 emen@adj1 emi_pr pres part mp
