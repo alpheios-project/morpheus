@@ -14154,6 +14154,8 @@
 :wd:a(_/s   relative fem acc pl
 :wd:a(/   relative neut acc pl
 
+:le:o(/s2
+:wd:o(/s pron1 3rd masc/fem nom sg
 
 :le:o(sa/kis
 :wd:o(sa/^kis  adverb

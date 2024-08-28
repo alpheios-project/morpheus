@@ -2297,7 +2297,7 @@
 :aj:du^na^t os_on	suff_acc
 
 :le:du/o
-:wd:du/o numeral
+:wd:du/o numeral nom acc dual masc fem neut
 :wd:du/w numeral epic
 :wd:duoi=n numeral gen dat dual masc fem neut
 :wd:duw=n numeral gen dat pl masc fem neut ionic
@@ -5832,6 +5832,7 @@
 :aj:e)m-moxq os_on
 
 :le:e)mo/s
+:wd:e)mo/s pron1 1st masc/fem nom sg
 :aj:e)m os_h_on suff_acc
 
 :le:e)mpaqh/s
