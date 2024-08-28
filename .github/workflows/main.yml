@@ -30,5 +30,7 @@ jobs:
       uses: EndBug/add-and-commit@v4
       with:
         message: "auto build linux"
+        add: dist/bin/platform/Linux_x86-gcc4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
