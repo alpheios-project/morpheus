@@ -25,3 +25,10 @@ jobs:
 
     - name: strip
       run: bash -c "strip bin/morpheus && cp bin/morpheus dist/bin/platform/Linux_x86-gcc4"
+
+    - name: commit
+      uses: EndBug/add-and-commit@v4
+      with:
+        message: "auto build linux"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
