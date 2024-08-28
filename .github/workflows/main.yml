@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Build Morpheus
 
 on:
   push:
@@ -13,5 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: build-linux
-      run: cd src && make clean && make -e && make install
+    
+    - name: Update packages
+      run: sudo apt-get update -qq
+      
+    - name: Install dependencies
+      run: sudo apt-get install -qq -y build-essential flex-old
+
+    - name: Make
+      run: bash -c "cd src/ && CFLAGS='-std=gnu89 -fcommon' make && make install"
