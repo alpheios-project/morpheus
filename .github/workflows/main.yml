@@ -24,4 +24,4 @@ jobs:
       run: bash -c "cd src/ && CFLAGS='-std=gnu89 -fcommon' make && make install"
 
     - name: strip
-      run: bash -c "strip bin/morpheus cp bin/morpheus dist/bin/platform/Linux_x86-gcc4"
+      run: bash -c "strip bin/morpheus && cp bin/morpheus dist/bin/platform/Linux_x86-gcc4"
