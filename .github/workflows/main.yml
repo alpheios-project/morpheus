@@ -21,4 +21,4 @@ jobs:
       run: sudo apt-get install -qq -y build-essential flex-old
 
     - name: Make
-      run: bash -c "cd src/ && CFLAGS='-std=gnu89 -fcommon' make && make install"
+      run: bash -c "cd src/ && CFLAGS='-std=gnu89 -fcommon' make clean && make -e && make install"
