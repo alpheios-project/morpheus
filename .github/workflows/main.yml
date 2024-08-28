@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: build-linux
-      run: cd source && make clean && make -e && make install
+      run: cd src && make clean && make -e && make install
