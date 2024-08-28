@@ -27,7 +27,7 @@ jobs:
       run: bash -c "strip bin/morpheus && cp bin/morpheus dist/bin/platform/Linux_x86-gcc4"
 
     - name: Make the stemlib
-      run: bash -c "build_stemlib.sh"
+      run: bash -c "./build_stemlib.sh"
 
     - name: commit
       uses: EndBug/add-and-commit@v4
