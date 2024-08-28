@@ -11,10 +11,10 @@ DICTOBJ=dictio.o derivio.o compnoun.o
 #CC=hc
 CC=cc
 CC=gcc
-#CFLAGS= -O -I${INCLUDE}   -g
-#CFLAGS= -O -I${INCLUDE}   -Wstrict-prototypes   -Wmissing-prototypes
-#CFLAGS= -O2 -I${INCLUDE}
-CFLAGS= -g -I${INCLUDE}
+#CFLAGS+= -O -I${INCLUDE}   -g
+#CFLAGS+= -O -I${INCLUDE}   -Wstrict-prototypes   -Wmissing-prototypes
+#CFLAGS+= -O2 -I${INCLUDE}
+CFLAGS+= -g -I${INCLUDE}
 LINTFLAGS= -I${INCLUDE} -DDEBUG
 RM=/bin/rm -f
 

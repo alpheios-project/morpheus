@@ -14,7 +14,7 @@ main()
 		if (line[lastchar] == '\n')
 			line[lastchar] = '\0';
 
-		strcpy(line,line+4);
+		Xstrcpy(line,line+4);
 		if( is_substring("ew_",line) || is_substring("aw_",line)) {
 			check_ew(line);
 		} else if( is_substring("i h_hs",line)) {
@@ -34,7 +34,7 @@ char *p;
 	char *s;
 	int rval = 0;
 
-	strcpy(workstem,p);
+	Xstrcpy(workstem,p);
 	stripmetachars(workstem);
 	s=workstem;
 	while(*s&&!isspace(*s)) s++;
@@ -66,7 +66,7 @@ char * p;
 	while(*s&&!isspace(*s)) s++;
 	if(isspace(*s)&&s!=p) s--;
 	*s = 0;
-	strcpy(stembuf,p);
+	Xstrcpy(stembuf,p);
 	stripmetachars(stembuf);
 	rval = chckstem(stembuf,stemkeys,1);
 	if( rval ) rval = 2;

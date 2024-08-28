@@ -39,7 +39,6 @@
     FILE * OpenGrklist();
     char * GetAuthRec();
     char * AuthInGrklist();
-    char * strcpy();
     char * strncpy();
     char * getenv();
 
@@ -280,7 +279,7 @@ static char *
                 fprintf(stderr,"could not open grklist, looking for %s\n", s );
                 return( NULL );
         }
-        strcpy( tmp , s );
+        Xstrcpy( tmp , s );
         strcat( tmp , "\t" );
         
 

@@ -2,8 +2,8 @@
 LEXLIB = -lfl
 
 INCLUDE=../includes
-#CFLAGS= -O2 -I${INCLUDE}
-CFLAGS= -g -I${INCLUDE}
+#CFLAGS+= -O2 -I${INCLUDE}
+CFLAGS+= -g -I${INCLUDE}
 RM=rm
 CC=cc
 CC=gcc
