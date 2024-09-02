@@ -1,4 +1,4 @@
-name: Build Morpheus
+name: Build Morpheus Stemlibs
 
 on:
   push:
@@ -22,9 +22,6 @@ jobs:
 
     - name: Make
       run: bash -c "cd src/ && CFLAGS='-std=gnu89 -fcommon' make && make install"
-
-    - name: strip
-      run: bash -c "strip bin/morpheus && cp bin/morpheus dist/bin/platform/Linux_x86-gcc4"
 
     - name: Make the stemlib
       run: bash -c "./build_stemlib.sh"
