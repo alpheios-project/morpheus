@@ -45,7 +45,7 @@
 :wd:a)/ndras   irreg_decl3 masc acc pl
 :wd:a)ne/ras   irreg_decl3 masc acc pl epic
 
-:le:a)rno/s
+:le:a)rh/n
 :wd:a)rno/s   irreg_decl3 masc/fem gen sg
 :wd:a)rni/   irreg_decl3 masc/fem dat sg
 :wd:a)/rna   irreg_decl3 masc/fem acc sg
@@ -278,15 +278,6 @@
 :wd:dru/as   irreg_decl3 fem acc pl
 
 :le:ei(=s
-:wd:ei(=s numeral nom sg masc
-:wd:mi/a numeral nom sg fem
-:wd:e(/n numeral nom acc sg neut
-:wd:e(no/s numeral gen sg masc neut
-:wd:mi/a=s numeral gen sg fem
-:wd:e(ni/ numeral dat sg masc neut
-:wd:mia=| numeral dat sg fem
-:wd:e(/na numeral acc sg masc
-:wd:mi/an numeral acc sg fem
 :wd:ei(=s irreg_decl3 sg masc nom sg
 :wd:h(=s irreg_decl3 sg masc nom sg doric *theocr.
 :wd:e(/n irreg_decl3 sg neut nom voc acc sg
@@ -408,12 +399,12 @@
 :wd:*di_/ irreg_decl3 masc sg pers_name dat
 :wd:*zh=n irreg_decl3 masc sg pers_name acc
 :wd:*dio/qen adverb epic
-:wd:*dios   irreg_decl3 masc gen sg pers_name needs_acc
-:wd:*zhnos   irreg_decl3 masc gen sg pers_name needs_acc poetic
-:wd:*za_nos   irreg_decl3 masc gen sg doric pers_name needs_acc
+:wd:*dio/s   irreg_decl3 masc gen sg pers_name 
+:wd:*zhno/s   irreg_decl3 masc gen sg pers_name poetic
+:wd:*za_no/s   irreg_decl3 masc gen sg doric pers_name 
 :wd:*dii   irreg_decl3 masc dat sg pers_name needs_acc
-:wd:*zhni   irreg_decl3 masc dat sg pers_name needs_acc poetic
-:wd:*za_ni   irreg_decl3 masc dat sg doric pers_name needs_acc
+:wd:*zhni/   irreg_decl3 masc dat sg pers_name needs_acc poetic
+:wd:*za_ni/   irreg_decl3 masc dat sg doric pers_name needs_acc
 :wd:*dia   irreg_decl3 masc acc sg pers_name needs_acc
 :wd:*zhna   irreg_decl3 masc acc sg pers_name needs_acc poetic
 :wd:*za_na   irreg_decl3 masc acc sg doric pers_name needs_acc
@@ -745,19 +736,20 @@
 :wd:ta_/s   article fem acc pl
 :wd:ta/   article neut acc pl
 
-:le:o)/nta
-:wd:o)/nta   irreg_decl3 neut nom/voc/acc pl
-:wd:o)ntw=n   irreg_decl3 neut gen pl
-:wd:ou)si/n   irreg_decl3 neut dat pl attic epic doric ionic nu_movable
-:wd:ou)si/   irreg_decl3 neut dat pl attic epic doric ionic
-:wd:o)/ntesin   irreg_decl3 neut dat pl nu_movable poetic
-:wd:o)/ntesi   irreg_decl3 neut dat pl poetic
-:wd:oi)si/n   irreg_decl3 neut dat pl doric aeolic nu_movable
-:wd:oi)si/   irreg_decl3 neut dat pl doric aeolic
-:wd:ou)si/n   irreg_decl3 neut dat pl epic nu_movable
-:wd:ou)si/   irreg_decl3 neut dat pl epic
-:wd:o)/ntessin   irreg_decl3 neut dat pl epic aeolic nu_movable
-:wd:o)/ntessi   irreg_decl3 neut dat pl epic aeolic
+#:le:o)/nta
+#:wd:o)/nta   irreg_decl3 neut nom/voc/acc pl
+#:wd:o)/ntwn   irreg_decl3 neut gen pl
+#:wd:ou)=sin   irreg_decl3 neut dat pl attic epic doric ionic nu_movable
+#:wd:ou)=si   irreg_decl3 neut dat pl attic epic doric ionic
+#:wd:o)/ntesin   irreg_decl3 neut dat pl nu_movable poetic
+#:wd:o)/ntesi   irreg_decl3 neut dat pl poetic
+#:wd:oi)si/n   irreg_decl3 neut dat pl doric aeolic nu_movable
+#:wd:oi)si/   irreg_decl3 neut dat pl doric aeolic
+#:wd:ou)=si/n   irreg_decl3 neut dat pl epic nu_movable
+#:wd:ou)=si/   irreg_decl3 neut dat pl epic
+#:wd:o)/ntessin   irreg_decl3 neut dat pl epic aeolic nu_movable
+#:wd:o)/ntessi   irreg_decl3 neut dat pl epic aeolic
+#I edited a couple of accents, but regardless this shld just go to eimi sorry
 
 :le:o(/sge
 :wd:o(/ge rel_pron neut nom voc acc sg epic
@@ -1143,7 +1135,7 @@
 :wd:po/dessi   irreg_decl3 masc dat pl epic aeolic
 :wd:po/das   irreg_decl3 masc acc pl
 
-:le:sautou=
+:le:seautou=
 :wd:sautou=   pron1 masc/neut gen sg
 :wd:seautou=   pron1 masc/neut gen sg
 :wd:sewutou=   pron1 masc/neut gen sg ionic
@@ -1357,8 +1349,8 @@
 :wd:tew| indef_pron enclitic dat sg ionic epic
 :wd:tw| indef_pron enclitic dat sg attic epic
 :wd:tewn indef_pron enclitic gen pl ionic epic
-:wd:a)/ssa indef_pron enclitic neut acc pl epic
-:wd:tinw=n indef_pron enclitic gen pl enclitic
+:wd:a)/ssa indef_pron enclitic neut nom acc pl epic
+:wd:a)/tta indef_pron enclitic neut nom acc pl epic
 :wd:tinos   indef gen sg enclitic
 :wd:tini   indef dat sg enclitic
 :wd:tina   indef masc/fem acc sg enclitic
@@ -1413,14 +1405,6 @@
 :wd:tri/a numeral nom voc acc pl neut
 :wd:triw=n numeral gen pl masc fem neut
 :wd:trisi/ numeral dat pl masc fem neut
-
-:le:te/ttares
-:wd:te/ttares numeral nom voc pl masc fem
-:wd:te/ttara numeral nom voc acc pl neut
-:wd:tetta/rwn numeral gen pl masc fem neut
-:wd:te/ttarsi numeral dat pl masc fem neut
-:wd:te/ttarsin numeral dat pl masc fem neut
-:wd:te/ttaras numeral acc pl masc fem
 
 :le:u(/dwr
 :wd:u(/dwr irreg_decl3 neut nom voc acc sg
