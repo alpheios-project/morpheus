@@ -61,13 +61,12 @@
 #not to be confused with stafulh/
 
 #the following shows up in Iliad 4 or so -- a hapax
-:le:daitro/n
-:no:datr os_ou neut suff_acc
 
 #proper names
 :le:*ai)nei/as
-:no:*ai)nei hs_ou masc sg
-:no:*ai)ne hs_ou masc epic sg
+:no:*ai)nei hs_ou masc 
+:no:*ai)ne hs_ou masc epic
+#grammarians wanna multiply so take off the sg
 
 :le:*ai)su/mh
 :no:*ai)sum h_hs fem  sg
@@ -331,13 +330,13 @@
 :le:*qa/muris
 :no:*qamur is_idos masc  sg
 
-:le:*qe/mis
-:no:*qem is_itos fem sg
-:no:*qemis s_tos fem sg epic dat sg
-:no:*qemis s_tos fem sg epic acc sg
+#:le:*qe/mis
+#:no:*qem is_itos fem sg
+#:no:*qemis s_tos fem sg epic dat sg
+#:no:*qemis s_tos fem sg epic acc sg
 
-:le:*qe/mistis
-:no:*qemist is_idos fem sg
+#:le:*qe/mistis
+#:no:*qemist is_idos fem sg
 
 :le:*qe/speia
 :no:*qespei a_hs fem geog_name sg
@@ -547,7 +546,7 @@
 :no:*lurnhss os_ou fem suff_acc geog_name sg
 
 :le:*ma/kar
-:no:*maka r_ros masc sg
+:no:*maka r_ros masc sg pers_name
 
 :le:*ma/leia
 :no:*malei a_hs fem geog_name
@@ -939,7 +938,7 @@
 :no:*xrom is_idos fem geog_name sg
 
 :le:*xruso/qemis
-:no:*xrusoqem is_itos fem sg
+:no:*xrusoqem is_idos fem sg
 
 :le:*yuri/h
 :no:*yuri h_hs fem geog_name sg
