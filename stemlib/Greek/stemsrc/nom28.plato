@@ -22,9 +22,6 @@
 :le:a)gkistreutiko/s
 :aj:a)gkistreutik os_h_on suff_acc
 
-:le:a)glai+smo/s
-:no:a)glai+sm os_ou masc suff_acc
-
 :le:a)gorano/mion
 :no:a)goranomi os_ou neut
 
@@ -45,9 +42,6 @@
 
 :le:a)dolesxiko/s
 :aj:a)dolesxik os_h_on suff_acc
-
-:le:a)ei/zwos
-:aj:a)eizw os_on
 
 :le:a)eiqeh/r
 :aj:a)eiqeh r_ros stem_acc
@@ -85,7 +79,7 @@
 :le:a)ke/ratos
 :aj:a)kerat os_on
 
-:le:a)/keros
+:le:a)/kerws
 :aj:a)ker os_on
 :aj:a)ker ws_wn
 
@@ -155,8 +149,8 @@
 :le:a)nazh/thsis
 :no:a)nazhths is_ews fem
 
-:le:a)nalhpte/os
-:aj:a)nalhpt verb_adj1
+#:le:a)nalhpte/os
+#:aj:a)nalhpt verb_adj1
 
 :le:a)nalo/gisma
 :no:a)nalogis ma_matos neut
@@ -179,8 +173,8 @@
 :le:a)ndrei=os
 :aj:a)ndrei os_h_on stem_acc
 
-:le:a)ndriste/os
-:aj:a)ndrist verb_adj1
+#:le:a)ndriste/os
+#:aj:a)ndrist verb_adj1
 
 :le:a)nei/licis
 :no:a)neilic is_ews fem
@@ -212,14 +206,14 @@
 :le:a)nerma/tistos
 :aj:a)nermatist os_on
 
-:le:a)nerwthte/os
-:aj:a)nerwtht verb_adj1
+#:le:a)nerwthte/os
+#:aj:a)nerwtht verb_adj1
 
 :le:a)neu/retos
 :aj:a)neuret os_on
 
-:le:a)neurete/os
-:aj:a)neuret verb_adj1
+#:le:a)neurete/os
+#:aj:a)neuret verb_adj1
 
 :le:a)neyio/ths
 :no:a)neyioth s_tos fem
@@ -257,8 +251,8 @@
 :le:a)nosiourgo/s
 :aj:a)nosiourg os_on suff_acc
 
-:le:a)ntapodote/os
-:aj:a)ntapodot verb_adj1
+#:le:a)ntapodote/os
+#:aj:a)ntapodot verb_adj1
 
 :le:a)ntilhptiko/s
 :aj:a)ntilhptik os_h_on suff_acc
@@ -269,8 +263,8 @@
 :le:a)ntiprobolh/
 :no:a)ntiprobol h_hs fem suff_acc
 
-:le:a)ntirrhte/os
-:aj:a)ntirrht verb_adj1
+#:le:a)ntirrhte/os
+#:aj:a)ntirrht verb_adj1
 
 :le:a)nti/tasis
 :no:a)ntitas is_ews fem
@@ -287,8 +281,8 @@
 :le:a)nwmalo/ths
 :no:a)nwmaloth s_tos fem
 
-:le:a)panthte/os
-:aj:a)pantht verb_adj1
+#:le:a)panthte/os
+#:aj:a)pantht verb_adj1
 
 :le:a)pa/cios
 :aj:a)paci os_on
@@ -320,8 +314,8 @@
 :le:a)plasti/a
 :no:a)plasti h_hs fem stem_acc
 
-:le:a)poblepte/os
-:aj:a)poblept verb_adj1
+#:le:a)poblepte/os
+#:aj:a)poblept verb_adj1
 
 :le:a)poboleu/s
 :no:a)pobol eus_ews masc suff_acc
@@ -329,8 +323,8 @@
 :le:a)podiopomph/sis
 :no:a)podiopomphs is_ews fem
 
-:le:a)pokmhte/os
-:aj:a)pokmht verb_adj1
+#:le:a)pokmhte/os
+#:aj:a)pokmht verb_adj1
 
 :le:a)popla/nhsis
 :no:a)poplanhs is_ews fem
@@ -347,8 +341,8 @@
 :le:a)po/rrhma
 :no:a)porrh ma_matos neut
 
-:le:a)porrhte/os
-:aj:a)porrht verb_adj1
+#:le:a)porrhte/os
+#:aj:a)porrht verb_adj1
 
 :le:a)potelestiko/s
 :aj:a)potelestik os_h_on suff_acc
@@ -377,8 +371,8 @@
 :le:a)ptaisi/a
 :no:a)ptaisi h_hs fem stem_acc
 
-:le:a(pte/os
-:aj:a(pt verb_adj1
+#:le:a(pte/os
+#:aj:a(pt verb_adj1
 
 :le:a)rtia/kis
 :wd:a)rtia/kis adverb
@@ -401,8 +395,8 @@
 :le:a)spalieutiko/s
 :aj:a)spalieutik os_h_on suff_acc
 
-:le:a)spaste/os
-:aj:a)spast verb_adj1
+#:le:a)spaste/os
+#:aj:a)spast verb_adj1
 
 :le:a)stenakti/
 :wd:a)stenakti/ adverb
@@ -572,8 +566,8 @@
 :le:dhmoterph/s
 :aj:dhmoterp hs_es suff_acc
 
-:le:diabiwte/os
-:aj:diabiwt verb_adj1
+#:le:diabiwte/os
+#:aj:diabiwt verb_adj1
 
 :le:diaqeth/r
 :no:diaqeth r_ros masc stem_acc
@@ -581,11 +575,11 @@
 :le:diaiw/nios
 :aj:diaiwni os_h_on
 
-:le:diakeleuste/os
-:aj:diakeleust verb_adj1
+#:le:diakeleuste/os
+#:aj:diakeleust verb_adj1
 
-:le:diakinduneute/os
-:aj:diakinduneut verb_adj1
+#:le:diakinduneute/os
+#:aj:diakinduneut verb_adj1
 
 :le:diakritiko/s
 :aj:diakritik os_h_on suff_acc
@@ -611,8 +605,8 @@
 :le:diano/hsis
 :no:dianohs is_ews fem
 
-:le:dianohte/os
-:aj:dianoht verb_adj1
+#:le:dianohte/os
+#:aj:dianoht verb_adj1
 
 :le:dia/noia
 :no:dianoi a_hs fem
@@ -629,8 +623,8 @@
 :le:dia/rrhsis
 :no:diarrhs is_ews fem
 
-:le:diaskepte/os
-:aj:diaskept verb_adj1
+#:le:diaskepte/os
+#:aj:diaskept verb_adj1
 
 :le:dia/skeyis
 :no:diaskey is_ews fem
@@ -638,8 +632,8 @@
 :le:dia/sofos
 :aj:diasof os_on
 
-:le:diaswste/os
-:aj:diaswst verb_adj1
+#:le:diaswste/os
+#:aj:diaswst verb_adj1
 
 :le:diauxe/nios
 :aj:diauxeni os_on
@@ -653,11 +647,11 @@
 :le:didumo/ths
 :no:didumoth s_tos fem
 
-:le:diecite/os
-:aj:diecit verb_adj1
+#:le:diecite/os
+#:aj:diecit verb_adj1
 
-:le:diereunhte/os
-:aj:diereunht verb_adj1
+#:le:diereunhte/os
+#:aj:diereunht verb_adj1
 
 :le:diqurambw/dhs
 :aj:diqurambwd hs_es stem_acc
@@ -668,8 +662,8 @@
 :le:dika/simos
 :aj:dikasim os_on
 
-:le:dioriste/os
-:aj:diorist verb_adj1
+#:le:dioriste/os
+#:aj:diorist verb_adj1
 
 :le:diplasiasmo/s
 :no:diplasiasm os_ou masc suff_acc
@@ -753,8 +747,8 @@
 :le:du/sfrastos
 :aj:dusfrast os_on
 
-:le:dusxerante/os
-:aj:dusxerant verb_adj1
+#:le:dusxerante/os
+#:aj:dusxerant verb_adj1
 
 :le:dusxe/rasma
 :no:dusxeras ma_matos neut
@@ -823,10 +817,10 @@
 :le:ei)sa/ggelsis
 :no:ei)sa/ggels is_ews fem
 
-:le:e)kkrite/os
-:aj:e)kkrit verb_adj1
+#:le:e)kkrite/os
+#:aj:e)kkrit verb_adj1
 
-:le:e)klekte/os
+:le:e)klekte/on
 :aj:e)klekt verb_adj2
 
 :le:e)/klecis
@@ -840,9 +834,6 @@
 
 :le:e)ktato/s
 :aj:e)ktat os_h_on suff_acc
-
-:le:e)/kteisma
-:no:e)kteis ma_matos neut
 
 :le:e)ktu/pwma
 :no:e)ktupw ma_matos neut
@@ -859,8 +850,8 @@
 :le:e)lafro/ths
 :no:e)lafroth s_tos fem
 
-:le:e)legkte/os
-:aj:e)legkt verb_adj1
+:le:e)legkte/on
+:aj:e)legkt verb_adj2
 
 :le:e)leuqeriko/s
 :aj:e)leuqerik os_h_on suff_acc
@@ -875,8 +866,8 @@
 :le:e)lpisto/s
 :aj:e)lpist os_h_on suff_acc
 
-:le:e)mblhte/os
-:aj:e)mblht verb_adj1
+:le:e)mblhte/on
+:aj:e)mblht verb_adj2
 
 :le:e(me/ra
 :no:e(mer h_hs fem stem_acc
@@ -900,8 +891,8 @@
 :le:e)mfanismo/s
 :no:e)mfanism os_ou masc suff_acc
 
-:le:e)mfaniste/os
-:aj:e)mfanist verb_adj1
+#:le:e)mfaniste/os
+#:aj:e)mfanist verb_adj1
 
 :le:e)mfanistiko/s
 :aj:e)mfanistik os_h_on suff_acc
@@ -933,8 +924,8 @@
 :le:e)nneethri/s
 :no:e)nneethr is_idos fem suff_acc
 
-:le:e)nnohte/os
-:aj:e)nnoht verb_adj1
+#:le:e)nnohte/os
+#:aj:e)nnoht verb_adj1
 
 :le:e)/nruqmos
 :aj:e)nruqm os_on
@@ -987,17 +978,17 @@
 :le:e)panabasmo/s
 :no:e)panabasm os_ou masc suff_acc
 
-:le:e)panorqwte/os
-:aj:e)panorqwt verb_adj1
+:le:e)panorqwte/on
+:aj:e)panorqwt verb_adj2
 
 :le:e)pau/ch
 :no:e)pauc h_hs fem
 
-:le:e)peikte/os
-:aj:e)peikt verb_adj1
+#:le:e)peikte/os
+#:aj:e)peikt verb_adj1
 
-:le:e)pemblhte/os
-:aj:e)pemblht verb_adj1
+#:le:e)pemblhte/os
+#:aj:e)pemblht verb_adj1
 
 :le:e)peuxh/
 :no:e)peux h_hs fem suff_acc
@@ -1020,14 +1011,15 @@
 :le:e)pikourhtiko/s
 :aj:e)pikourhtik os_h_on suff_acc
 
-:le:e)pimnhste/os
-:aj:e)pimnhst verb_adj1
+#:le:e)pimnhste/os
+#:aj:e)pimnhst verb_adj1
+#duplicate
 
 :le:e)pi/monos
 :aj:e)pimon os_on
 
-:le:e)pinemhte/os
-:aj:e)pinemht verb_adj1
+#:le:e)pinemhte/os
+#:aj:e)pinemht verb_adj1
 
 :le:e)pipi/stwsis
 :no:e)pipistws is_ews fem
@@ -1041,8 +1033,8 @@
 :le:e)pi/sthma
 :no:e)pisth ma_matos neut
 
-:le:e)pisxete/os
-:aj:e)pisxet verb_adj1
+#:le:e)pisxete/os
+#:aj:e)pisxet verb_adj1
 
 :le:e)pitaktiko/s
 :aj:e)pitaktik os_h_on suff_acc
@@ -1068,8 +1060,8 @@
 :le:e)noikodo/mhma
 :no:e)noikodomh ma_matos neut
 
-:le:e)ponomaste/os
-:aj:e)ponomast verb_adj1
+#:le:e)ponomaste/os
+#:aj:e)ponomast verb_adj1
 
 :le:e(ptaeti/a
 :no:e(ptaeti h_hs stem_acc
@@ -1083,8 +1075,8 @@
 :le:e)ra/nisis
 :no:e)ranis is_ews fem
 
-:le:e)reqiste/os
-:aj:e)reqist verb_adj1
+#:le:e)reqiste/os
+#:aj:e)reqist verb_adj1
 
 :le:e)re/yimos
 :aj:e)reyim os_on
@@ -1170,8 +1162,8 @@
 :le:eu)/kritos
 :aj:eu)krit os_on
 
-:le:eu)kte/os
-:aj:eu)kt verb_adj1
+#:le:eu)kte/os
+#:aj:eu)kt verb_adj1
 
 :le:eu)labhtiko/s
 :aj:eu)labhtik os_h_on suff_acc
@@ -1210,7 +1202,7 @@
 :no:zes is_ews fem
 
 :le:zh=ta
-:wd:zh=ta alphabetic
+:wd:zh=ta alphabetic neut
 
 :le:zu/mwma
 :no:zumw ma_matos neut
@@ -1281,8 +1273,8 @@
 :le:qe/ths
 :no:qet hs_ou masc
 
-:le:qewrhte/os
-:aj:qewrht verb_adj1
+#:le:qewrhte/os
+#:aj:qewrht verb_adj1
 
 :le:qrasuceni/a
 :no:qrasuceni h_hs fem
@@ -1344,15 +1336,8 @@
 :le:kaqierwte/os
 :aj:kaqierwt verb_adj2
 
-:le:kakhgo/ros
-:aj:kakhgor os_on stem_acc
-:aj:kak_gor os_on stem_acc doric
-
 :le:kakodiki/a
 :no:kakodiki h_hs fem
-
-:le:kakoh/qhs
-:aj:kakohq hs_es
 
 :le:kakosxh/mwn
 :aj:kakosxhm wn_on
@@ -1393,8 +1378,8 @@
 :le:katalabh/
 :no:katalab h_hs fem suff_acc
 
-:le:katalekte/os
-:aj:katalekt verb_adj2
+#:le:katalekte/os
+#:aj:katalekt verb_adj2
 
 :le:kata/loipos
 :aj:kataloip os_on
@@ -1402,8 +1387,8 @@
 :le:katano/hma
 :no:katanoh ma_matos neut
 
-:le:katanohte/os
-:aj:katanoht verb_adj1
+#:le:katanohte/os
+#:aj:katanoht verb_adj1
 
 :le:kataplokh/
 :no:kataplok h_hs fem suff_acc
@@ -1459,8 +1444,8 @@
 :le:kiei/nhsis
 :no:kieinhs is_ews fem
 
-:le:kiqariste/os
-:aj:kiqarist verb_adj1
+#:le:kiqariste/os
+#:aj:kiqarist verb_adj1
 
 :le:kinhto/s
 :aj:kinht os_h_on suff_acc
@@ -1497,7 +1482,7 @@
 :no:koinwnhs is_ews fem
 
 :le:kollw/dhs
-:aj:kollwd hs_es
+:aj:kollwd hs_es stem_acc
 
 :le:kolumbhtiko/s
 :aj:kolumbhtik os_h_on suff_acc
@@ -1523,8 +1508,8 @@
 :le:kroniko/s
 :aj:kronik os_h_on suff_acc
 
-:le:kubernhte/os
-:aj:kubernht verb_adj1
+#:le:kubernhte/os
+#:aj:kubernht verb_adj1
 
 :le:kubiko/s
 :aj:kubik os_h_on suff_acc
@@ -1546,6 +1531,7 @@
 
 :le:la/bda
 :wd:la/bda alphabetic neut
+:wd:la/mbda alphabetic neut
 
 :le:liqoeidh/s
 :aj:liqoeid hs_es suff_acc
@@ -1583,14 +1569,14 @@
 :le:megeqourgi/a
 :no:megeqourgi h_hs fem
 
-:le:meqete/os
-:aj:meqet verb_adj1
+#:le:meqete/os
+#:aj:meqet verb_adj1
 
 :le:mei/hs
 :no:mei hs_ou masc
 
-:le:meikte/os
-:aj:meikt verb_adj1
+#:le:meikte/os
+#:aj:meikt verb_adj1
 
 :le:mei=cis
 :no:meic is_ews fem
@@ -1610,11 +1596,12 @@
 :le:mesegguwqe/n
 :wd:mesegguwqe/n adverb
 
-:le:metadiwkte/os
-:aj:metadiwkt verb_adj1
+#:le:metadiwkte/os
+#:aj:metadiwkt verb_adj1
 
-:le:metalhpte/os
-:aj:metalhpt verb_adj1
+:le:metalhpte/on
+:aj:metalhpt verb_adj2
+:aj:metalhmpt verb_adj2
 
 :le:metallei=on
 :no:metallei os_ou neut stem_acc
@@ -1656,7 +1643,7 @@
 :aj:neurin os_h_on
 
 :le:neurw/dhs
-:aj:neurwd hs_es
+:aj:neurwd hs_es stem_acc
 
 :le:nhstiko/s
 :aj:nhstik os_h_on suff_acc
@@ -1664,8 +1651,8 @@
 :le:nhfantiko/s
 :aj:nhfantik os_h_on suff_acc
 
-:le:nohte/os
-:aj:noht verb_adj1
+#:le:nohte/os
+#:aj:noht verb_adj1
 
 :le:nomeutiko/s
 :aj:nomeutik os_h_on suff_acc
@@ -1744,8 +1731,8 @@
 :aj:o(mokoit os_on
 :aj:o(mokoit is_idos
 
-:le:o(mologhte/os
-:aj:o(mologht verb_adj1
+:le:o(mologhte/on
+:aj:o(mologht verb_adj2
 
 :le:o(momh/twr
 :no:o(momht wr_oros masc fem
@@ -1765,8 +1752,8 @@
 :le:o)mfalhtomi/a
 :no:o)mfalhtomi h_hs fem
 
-:le:o)neidiste/os
-:aj:o)neidist verb_adj1
+:le:o)neidiste/on
+:aj:o)neidist verb_adj2
 
 :le:o)neiropoli/a
 :no:o)neiropoli h_hs fem
@@ -1777,8 +1764,8 @@
 :le:o)nomasi/a
 :no:o)nomasi h_hs fem
 
-:le:o)nomaste/os
-:aj:o)nomast verb_adj1
+#:le:o)nomaste/os
+#:aj:o)nomast verb_adj1
 
 :le:o)nomastiko/s
 :aj:o)nomastik os_h_on suff_acc
@@ -1870,11 +1857,11 @@
 :le:parakata/basis
 :no:parakatabas is_ews fem
 
-:le:paralute/os
-:aj:paralut verb_adj1
+:le:paralute/on
+:aj:paralut verb_adj2
 
-:le:paramuqhte/os
-:aj:paramuqht verb_adj1
+:le:paramuqhte/on
+:aj:paramuqht verb_adj2
 
 :le:paraplh/sios
 :aj:paraplhsiaiter os_h_on comp
@@ -1894,8 +1881,8 @@
 :le:pa/rergos
 :aj:parerg os_on
 
-:le:parete/os
-:aj:paret verb_adj1
+#:le:parete/os
+#:aj:paret verb_adj1
 
 :le:pedieino/s
 :aj:pediein os_h_on suff_acc
@@ -1912,6 +1899,9 @@
 :le:pei=
 :wd:pei= alphabetic neut
 :wd:pi= alphabetic neut
+
+:le:r(w=
+:wd:r(w= alphabetic neut
 
 :le:pempthmo/rion
 :no:pempthmori os_ou neut
@@ -1937,8 +1927,8 @@
 :le:peri/blhma
 :no:periblh ma_matos neut
 
-:le:periqrekte/os
-:aj:periqrekt verb_adj1
+#:le:periqrekte/os
+#:aj:periqrekt verb_adj1
 
 :le:perika/lumma
 :no:perikalum ma_matos neut
@@ -1958,8 +1948,8 @@
 :le:periyugmo/s
 :no:periyugm os_ou masc suff_acc
 
-:le:peuste/os
-:aj:peust verb_adj1
+#:le:peuste/os
+#:aj:peust verb_adj1
 
 :le:piqanoqhri/a
 :no:piqanoqhri h_hs fem
@@ -1998,7 +1988,7 @@
 :aj:pneumatorr oos_oon
 
 :le:pneumatw/dhs
-:aj:pneumatwd hs_es
+:aj:pneumatwd hs_es stem_acc
 
 :le:politofqo/ros
 :aj:politofqor os_on stem_acc
@@ -2046,7 +2036,7 @@
 :aj:pothn os_h_on suff_acc
 
 :le:pragmateiw/dhs
-:aj:pragmateiwd hs_es
+:aj:pragmateiwd hs_es stem_acc
 
 :le:pra/sios
 :aj:prasi os_h_on
@@ -2057,30 +2047,31 @@
 :le:prodhlwtiko/s
 :aj:prodhlwtik os_h_on suff_acc
 
-:le:prodote/os
-:aj:prodot verb_adj1
+#:le:prodote/os
+#:aj:prodot verb_adj1
 
 :le:pro/krisis
 :no:prokris is_ews fem
 
-:le:promh/khs
-:aj:promhk hs_es
+#:le:promh/khs
+#:aj:promhk hs_es
+#duplicate
 
 :le:promnhstiko/s
 :aj:promnhstik os_h_on suff_acc
 
-:le:prorrhte/os
-:aj:prorrht verb_adj1
+#:le:prorrhte/os
+#:aj:prorrht verb_adj1
 
 :le:prosagwgei=on
 :no:prosagwgei os_ou neut stem_acc
 :no:prosagwgi os_ou neut
 
-:le:prosanagkaste/os
-:aj:prosanagkast verb_adj1
+#:le:prosanagkaste/os
+#:aj:prosanagkast verb_adj1
 
-:le:prosdianohte/os
-:aj:prosdianoht verb_adj1
+#:le:prosdianohte/os
+#:aj:prosdianoht verb_adj1
 
 :le:prosdo/khma
 :no:prosdokh ma_matos neut
@@ -2097,11 +2088,11 @@
 :le:pro/sxordos
 :aj:prosxord os_on
 
-:le:prosxrhste/os
-:aj:prosxrhst verb_adj1
+#:le:prosxrhste/os
+#:aj:prosxrhst verb_adj1
 
-:le:protimhte/os
-:aj:protimht verb_adj1
+#:le:protimhte/os
+#:aj:protimht verb_adj1
 
 :le:pro/timos
 :aj:proti_m os_on
@@ -2140,7 +2131,7 @@
 :aj:r(uptik os_h_on suff_acc
 
 :le:r(uw/dhs
-:aj:r(uwd hs_es
+:aj:r(uwd hs_es stem_acc
 
 :le:sarkoeidh/s
 :aj:sarkoeid hs_es suff_acc
@@ -2220,8 +2211,8 @@
 :le:sto/xasis
 :no:stoxas is_ews fem
 
-:le:strathghte/os
-:aj:strathght verb_adj1
+#:le:strathghte/os
+#:aj:strathght verb_adj1
 
 :le:streptiko/s
 :aj:streptik os_h_on suff_acc
@@ -2253,8 +2244,8 @@
 :le:su/llhcis
 :no:sullhc is_ews fem
 
-:le:summeikte/os
-:aj:summeikt verb_adj1
+#:le:summeikte/os
+#:aj:summeikt verb_adj1
 
 :le:su/mmeicis
 :no:summeic is_ews fem
@@ -2280,8 +2271,8 @@
 :le:sunagurmo/s
 :no:sunagurm os_ou masc suff_acc
 
-:le:sunarmoste/os
-:aj:sunarmost verb_adj1
+#:le:sunarmoste/os
+#:aj:sunarmost verb_adj1
 
 :le:sunarmotto/ntws
 :wd:sunarmotto/ntws adverb
@@ -2319,8 +2310,8 @@
 :le:su/ntasis
 :no:suntas is_ews fem
 
-:le:suntate/os
-:aj:suntat verb_adj1
+#:le:suntate/os
+#:aj:suntat verb_adj1
 
 :le:suntonolu_disti/
 :wd:suntonolu_disti/ adverb
@@ -2337,8 +2328,8 @@
 :le:su/nwsis
 :no:sunws is_ews fem
 
-:le:suskepte/os
-:aj:suskept verb_adj1
+#:le:suskepte/os
+#:aj:suskept verb_adj1
 
 :le:susfairisth/s
 :no:susfairist hs_ou masc suff_acc
@@ -2364,8 +2355,8 @@
 :le:swfronistu/s
 :no:swfronist us_uos fem suff_acc
 
-:le:takte/os
-:aj:takt verb_adj1
+#:le:takte/os
+#:aj:takt verb_adj1
 
 :le:talantei/a
 :no:talantei h_hs fem
@@ -2448,8 +2439,8 @@
 :le:u(hno/s
 :aj:u(hn os_h_on suff_acc
 
-:le:u(pakouste/os
-:aj:u(pakoust verb_adj1
+#:le:u(pakouste/os
+#:aj:u(pakoust verb_adj1
 
 :le:u(/pakros
 :aj:u(pakr os_on
@@ -2466,8 +2457,8 @@
 :le:u(perskelh/s
 :aj:u(perskel hs_es suff_acc
 
-:le:u(podekte/os
-:aj:u(podekt verb_adj1
+#:le:u(podekte/os
+#:aj:u(podekt verb_adj1
 
 :le:u(podh/lwsis
 :no:u(podhlws is_ews
@@ -2515,6 +2506,10 @@
 :wd:fei= alphabetic neut
 :wd:fi= alphabetic neut
 
+:le:xei=
+:wd:xei= alphabetic neut
+:wd:xi= alphabetic neut
+
 :le:fqeiristiko/s
 :aj:fqeiristik os_h_on suff_acc
 
@@ -2535,6 +2530,7 @@
 
 :le:fle/bion
 :no:flebi os_ou neut
+:no:flebi os_ou neut stem_acc
 
 :le:flegmonh/
 :no:flegmon h_hs fem suff_acc
@@ -2545,11 +2541,11 @@
 :le:fluarologi/a
 :no:fluarologi h_hs fem
 
-:le:foithte/os
-:aj:foitht verb_adj1
+#:le:foithte/os
+#:aj:foitht verb_adj1
 
-:le:fraste/os
-:aj:frast verb_adj1
+#:le:fraste/os
+#:aj:frast verb_adj1
 
 :le:frastiko/s
 :aj:frastik os_h_on suff_acc
