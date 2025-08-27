@@ -11,6 +11,7 @@ e@decl3 us_eia_u dat gen masc neut
 ea us_eia_u neut nom voc acc pl
 e-w^n us_eia_u masc neut gen pl
 e-@decl3 us_eia_u masc neut dual pl  not nom voc acc masc
-ees us_eia_u masc nom nom pl 
+e-es us_eia_u masc nom voc pl epic ionic
+ees us_eia_u masc nom voc acc pl attic 
 e-as us_eia_u acc pl masc epic ionic
 hos us_eia_u gen sg epic masc neut
