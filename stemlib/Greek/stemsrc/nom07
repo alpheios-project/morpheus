@@ -97,9 +97,8 @@
 :le:a)/gnamptos
 :aj:a)-knampt os_on
 
-:le:a)/gnamptei/
-:wd:a)/gnamptei/ adverb
-:wd:a)/knamptei/ adverb
+:le:a)knamptei/
+:wd:a)knamptei/ adverb
 
 :le:a)/kotos
 :aj:a)-kot os_on
@@ -171,7 +170,7 @@
 :no:a)peiromax hs_ou stem_acc masc
 
 :le:a)piomh/dhs
-:aj:a)piomhd hs_es stem_acc
+:aj:a)piomhd hs_es stem_acc doric
 :dnum	[0]	&of kindly thoughts.&
 
 :le:a)pri/atos
@@ -184,7 +183,7 @@
 :wd:a)ptwti/ adverb
 
 :le:a)rgenno/eis
-:aj:a)rgenn oeis_oessa
+:aj:a)rgenn oeis_oessa suff_acc
 
 :le:a)rgibre/nths
 :no:a)rgibrent hs_ou masc stem_acc
@@ -268,6 +267,32 @@
 :le:baqupe/dios
 :aj:baqu-pedi os_on
 
+:le:bh=ma
+:no:ba_ ma_matos neut doric
+
+:le:barubo/hs
+:no:baru-bo hs_ou stem_acc masc
+
+:le:baru/gdoupos
+:aj:baru-gdoup os_on
+
+:le:baru/kompos
+:aj:baru-komp os_on
+
+
+:le:baru/logois
+:aj:baru-log os_on
+
+:le:baru/ophs
+:no:baru-op hs_ou masc
+
+:le:barufqegkth/s
+:no:barufqegkt  hs_ou masc suff_acc
+
+:le:batei/a
+:no:batei h_hs fem 
+:no:bati h_hs fem suff_acc
+
 :le:biaths
 :no:bia_t hs_ou masc suff_acc
 
@@ -289,6 +314,7 @@
 
 :le:bromia/s
 :no:bromia s_dos stem_acc fem
+
 
 :le:bwla/kios
 :aj:bwlaki os_h_on
@@ -461,6 +487,9 @@
 :le:e)/corkos
 :aj:e)cork os_on
 
+:le:e)pagori/a
+:no:e)p-agori h_hs,fem,stem_acc
+
 :le:e)/palpnos
 :aj:e)p-alpn os_on
 
@@ -526,6 +555,9 @@
 
 :le:eu)agkh/s
 :aj:eu)agk hs_es suff_acc
+
+:le:eu)agori/a
+:no:eu)agori h_hs,fem,stem_acc
 
 :le:eu)a/gwn
 :no:eu)-agw n_nos
@@ -705,8 +737,8 @@
 :le:karterai/xmhs
 :no:karter-aixm hs_ou masc stem_acc
 
-:le:kartero/breis
-:aj:karterobr eis_essa
+:le:karterobre/ntas
+:aj:karterobrent hs_ou
 
 :le:kh/ruc
 :no:ka_ru_ c_kos masc *pind. doric poetic
@@ -722,8 +754,8 @@
 :le:kene/wsis
 :no:kenews is_ews,fem
 
-:le:keroe/is
-:aj:kero eis_essa suff_acc
+:le:kero/eis
+:aj:kero eis_essa stem_acc
 
 :le:kissodah/s
 :aj:kissoda hs_es suff_acc
@@ -808,6 +840,12 @@
 :le:mh/trws
 :no:ma_tr ws_wos,masc doric
 
+:le:megalhnori/a
+:no:mega^la_nori h_hs stem_acc fem  doric
+
+:le:megalh/nwr
+:no:mega^l-a_n wr_oros stem_acc masc fem doric
+
 :le:melihdh/s
 :aj:meli-a_d hs_es suff_acc   doric
 
@@ -849,8 +887,11 @@
 :aj:nhpoin os_on
 :aj:na_poin os_on doric
 
+:le:nauagi/a
+:no:nauagi h_hs,stem_acc,fem
+
 :le:naupru/tanis
-:aj:nau-prutan is_ews
+:no:nau-prutan is_ews,fem
 
 :le:nausikluto/s
 :aj:nausi-klut os_h_on suff_acc
@@ -914,7 +955,7 @@
 :no:o)rso-triain hs_ou masc doric
 
 :le:ou)ranomh/khs
-:aj:ou)ra^no-ma_k hs_es stem_acc  doric
+:aj:ou)ra^no-ma_k hs_es doric
 
 :le:o)fiw/dhs
 :aj:o)fiwd hs_es stem_acc
@@ -1137,6 +1178,9 @@
 :le:xrushla/katos
 :aj:xru_s-a_laka^t os_on   doric
 
+:le:xruso/karpos
+:aj:xru_so-karp os_on
+
 :le:xruso/peza
 :no:xru_so-pez a_hs,fem
 
@@ -1145,6 +1189,20 @@
 
 :le:xruso/plokos
 :aj:xru_so-plok os_on
+
+:le:ya/gios
+:aj:yagi os_h_on
+:dnum	[0]	&3askew&.
+
+:le:yefhno/s
+:aj:yefenn os_h_on suff_acc doric
+
+:le:w)ku/ths
+:no:w)kuta_ s_tos ant_acc fem  doric
+
+:le:w)ku/s
+:aj:w)kutat os_h_on irreg_superl
+:aj:w)kuter os_h_on irreg_comp
 
 :le:w)mobo/los
 :aj:w)mo-bol os_on

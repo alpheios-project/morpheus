@@ -6,6 +6,6 @@ c aor1
 x perf_act 
 * perfp_g 
 xq aor_pass 
-g aor_pass
+g aor2_pass
 c fut_perf 
 kt os_on

@@ -14,8 +14,9 @@ e@pr_sub_mp ew_pr pres mp subj
 e@pr_sub_act ew_pr pres act subj
 e@pr_opt_act ew_pr pres act opt
 o@ihn_opt ew_pr pres act opt
-e@imen_opt ew_pr pres opt act needs_acc
-e@pr_opt_mp ew_pr pres mp opt
+o@imen_opt ew_pr pres opt act needs_acc
+#was e@
+o@pr_opt_mp ew_pr pres mp opt
 e@imhn_opt ew_pr pres opt mp epic ionic needs_acc
 e@imp_ind_a ew_pr imperf ind act
 e-e@iterat_act ew_pr imperf ind act

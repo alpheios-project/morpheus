@@ -58,9 +58,10 @@
 
 #verbs entered for herod
 
-:le:loxhge/w
-:de:loxhg ew_denom
-:dnum	[0]	&3to lead a $lo/xos&, i.e. &3company.&
+#:le:loxhge/w
+#:de:loxhg ew_denom
+#:dnum	[0]	&3to lead a $lo/xos&, i.e. &3company.&
+#added to loxage/w
 
 :le:meqi/hmi
 :vs:memetei perfp_vow ionic
@@ -68,9 +69,10 @@
 
 :le:nome/w
 :de:nom ew_denom comp_only
-:vs:h)nomhs aor1 ind double_augment
-:vs:h)nom ew_pr imperf double_augment
-:vs:h)nomhq aor_pass double_augment
+#:vs:h)nomhs aor1 ind double_augment
+#:vs:h)nom ew_pr imperf double_augment
+#:vs:h)nomhq aor_pass double_augment
+#differently derived
 
 :le:qume/w
 :de:qu_m ew_denom comp_only
@@ -386,12 +388,6 @@
 
 :le:a)dhfage/w
 :de:a)dhfag ew_denom
-
-#verbs added for aeschines
-
-:le:paroine/w
-:de:paroin ew_denom
-:vs:peparw|nhk perf_act rpb:para/
 
 #verbs added for isaeus
 

@@ -4,9 +4,9 @@ as reg_fut
 ac reg_fut 
 ac ew_fut doric
 ass reg_fut epic 
-* aw_fut 
+# aw_fut 
 as aor1 
-ac aor1 
+ac aor1  
 ass aor1 
 ak perf_act 
 a perfp_d 

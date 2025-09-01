@@ -13,6 +13,7 @@
 
 :le:toute/sti
 :wd:toute/sti adverb
+:wd:toute/stin adverb nu_movable
 
 :le:prodikasi/a
 :no:prodikasi h_hs fem stem_acc
@@ -170,7 +171,7 @@
 :aj:e)pitropik os_h_on suff_acc
 
 :le:klhriko/s
-:aj:klhrik os_h_on
+:aj:klhrik os_h_on suff_acc
 
 :le:tulufa/nths
 :no:tulufant hs_ou masc

@@ -1,4 +1,5 @@
 h=nai aor2_pass aor pass inf  
+h=men aor2_pass aor pass inf poetic
 @pr_inf_ath aor2_pass aor inf pass
 h/menai aor2_pass aor inf pass epic
 h@ath_act_2 aor2_pass aor pass ind
@@ -10,11 +11,12 @@ e-@pr_sub_act aor2_pass aor pass subj
 e@pr_sub_act aor2_pass aor subj pass
 e@sh_sub_act aor2_pass aor subj pass needs_acc
 e@ihn_opt aor2_pass aor opt pass needs_acc
-hti aor2_pass aor pass imperat 2nd sg
+hqi aor2_pass aor pass imperat 2nd sg
 h@ath_imp_a aor2_pass 2nd sg aor pass imperat
 h@ath_imp_a aor2_pass aor imperat pass sg   not 2nd sg
 h@ath_imp_a aor2_pass aor imperat pass dual pl  not 3rd pl
 e@ath_imp_a aor2_pass aor imperat pass 3rd pl
+h/twsan aor2_pass 3rd pl aor pass imperat
 hs@pr_inf_mp aor2_pass fut pass inf  
 hs@pr_ind_mp aor2_pass fut pass ind
 hs@pr_opt_mp aor2_pass fut pass opt
