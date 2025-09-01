@@ -263,7 +263,7 @@
 :no:kif hs_eos neut
 
 :le:klimako/eis
-:aj:klimako eis_essa
+:aj:klimako eis_essa stem_acc
 
 :le:klw=sma
 :no:klws ma_matos neut
@@ -347,9 +347,6 @@
 :le:o)/robos
 :no:o)rob os_ou masc
 
-:le:o)sfra/ths
-:no:o)sfra_t hs_ou masc stem_acc
-
 :le:paide/rws
 :no:paide/rw s_tos masc
 
@@ -401,6 +398,8 @@
 
 :le:sa/myouxon
 :no:samyoux os_ou neut
+:no:samyux os_ou neut
+:no:samyux os_ou fem
 
 :le:semnologi/a
 :no:semnologi h_hs fem stem_acc

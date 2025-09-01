@@ -13,12 +13,13 @@
 :wd:a)ei/zwn os_on contr masc fem acc sg
 :wd:a)ei/zwn os_on contr neut nom voc acc sg
 :aj:a)eiz ws_wn stem_acc
+:aj:a)eizw| os_on late
 
 :le:a)krwle/nion
 :no:a)krwleni os_ou neut
 
-:le:a)lmw/dhs
-:aj:a)lmwd hs_es
+:le:a(lmw/dhs
+:aj:a(lmwd hs_es stem_acc
 
 :le:a)loato/s
 :no:a)loat os_ou masc suff_acc
@@ -258,8 +259,8 @@
 :le:neodamw/dhs
 :aj:neodamwd hs_es stem_acc
 
-:le:o(mologhte/on
-:aj:o(mologht verb_adj1
+#:le:o(mologhte/on
+#:aj:o(mologht verb_adj1
 
 :le:o(posaxh=|
 :wd:o(posaxh=| adverb
@@ -270,9 +271,6 @@
 
 :le:o)yimaqh/s
 :aj:o)yimaq hs_es suff_acc
-
-:le:pamplh/qhs
-:aj:pamplhq hs_es
 
 :le:para/rruma
 :no:pararru ma_matos neut

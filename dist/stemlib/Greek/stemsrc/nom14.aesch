@@ -31,9 +31,6 @@
 :le:a(ma/rthma
 :no:a(marti os_ou neut
 
-:le:a)/meiktos
-:aj:a)-meikt os_on
-
 :le:a)mpeth/s
 :aj:a)m-pet hs_es suff_acc
 
@@ -115,12 +112,11 @@
 :le:ba/qron
 :no:baqrei a_hs fem poetic
 
-
 :le:baquxai=os
 :aj:baquxai_ os_on stem_acc
 
 :le:blosuro/frwn
-:aj:blosuro-fr wn_on
+:aj:blosuro-fr wn_on stem_acc
 
 :le:bouqo/ros
 :aj:bouqor os_on
@@ -147,7 +143,7 @@
 :no:gem hs_eos neut
 
 :le:geraio/frwn
-:aj:geraio-fr wn_on
+:aj:geraio-fr wn_on stem_acc
 
 :le:gomfo/detos
 :aj:gomfo-det os_on
@@ -462,7 +458,7 @@
 :wd:oi)oioi=  exclam
 
 :le:oi)o/frwn
-:aj:oi)ofr wn_on
+:aj:oi)ofr wn_on stem_acc
 
 :le:o)istode/gmwn
 :aj:o)istodegm wn_on
@@ -483,7 +479,7 @@
 :aj:o(plo-ktup os_on
 
 :le:ou)lo/frwn
-:aj:ou)lo-fr wn_on
+:aj:ou)lo-fr wn_on stem_acc
 
 :le:ou)rano/nikos
 :aj:ou)rano-ni_k os_on
@@ -648,9 +644,6 @@
 :le:tocoteuxh/s
 :aj:tocoteux hs_es suff_acc
 
-:le:trige/rwn
-:aj:triger wn_ousa_on
-
 :le:u(paspisth/r
 :no:u(paspisth r_ros stem_acc masc
 
@@ -661,7 +654,7 @@
 :aj:u(perbar hs_es suff_acc
 
 :le:*(uperbo/reoi
-:aj:u(perbore os_ou masc
+:aj:u(perbore os_ou masc pers_name
 
 :le:u(pe/rpolus
 :aj:u(perpoll os_on
@@ -717,15 +710,9 @@
 :le:yi/quros
 :aj:yedur os_h_on suff_acc
 
-:le:w)mo/frwn
-:wd:w)mofro/nws adverb
-
 :le:me/llhsis
 :no:mell w_oos suff_acc fem
 
 :le:metwposwfrwn
-:aj:metwpo-swfr wn_on
+:aj:metwpo-swfr wn_on stem_acc
 
-:le:o)/ssa
-#get heteroclitic forms such as o)/sse
-:no:o)ss s_os dual neut

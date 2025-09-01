@@ -56,8 +56,8 @@
 :le:o(poi=os
 :wd:o(poiantinou=n os_h_on fem sg
 
-:le:r(a/|dios
-:wd:r(adi/ws  adverb
+#:le:r(a/|dios
+#:wd:r(adi/ws  adverb
 
 :le:sitopw/lhs
 :no:sitopwl hs_ou masc

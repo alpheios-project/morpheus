@@ -1,4 +1,4 @@
-* :aw_fut:azw :aw_pr:aw_denom :ew_pr:aw_denom:epic:ionic :ew_pr:ew_denom :ow_pr:ow_denom :perfp_g:ss :perfp_p:ptw :perfp_un:unw
+* :aw_pr:aw_denom :ew_pr:aw_denom:epic:ionic :ew_pr:ew_denom :ow_pr:ow_denom :perfp_g:ss :perfp_p:ptw :perfp_un:unw
 a :perfp_d:azw :perfp_g:azw :perfp_l:allw a_:ath_primary:aw_denom:attic:r_e_i_alpha a_:ma_matos:ew_denom:neut:attic:r_e_i_alpha a_:perfp_vow:aw_denom:attic:r_e_i_alpha a_:perfp_vow:aw_denom:doric:aeolic a_:perfp_vow:ew_denom:attic:r_e_i_alpha
 ac :aor1:azw :ew_fut:azw:doric :reg_fut:azw
 adm :wn_on:azw:doric:ionic
@@ -29,7 +29,7 @@ e :perfp_l:ellw
 eil :aor1:ellw
 el :ew_fut:ellw
 elk :perf_act:ellw
-ell :aor2:ellw :w_stem:ellw
+ell :w_stem:ellw
 elq :aor_pass:ellw
 els :aor1:ellw:epic :reg_fut:ellw:epic
 eu :perfp_s:euw :perfp_vow:euw :w_stem:euw
@@ -40,7 +40,7 @@ eusq :aor_pass:euw
 eut :os_on:euw
 f :aor2_pass:ptw :perf_act:ptw
 fq :aor_pass:ptw
-g :aor_pass:ss
+g :aor2_pass:ss
 h :ath_primary:aw_denom :ma_matos:ew_denom:neut :perfp_vow:aw_denom:attic:ionic :perfp_vow:ew_denom
 hk :perf_act:aw_denom:attic:ionic :perf_act:ew_denom
 hl :aor1:allw
